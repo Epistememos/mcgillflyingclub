@@ -1,34 +1,42 @@
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+# McGill Flying Club Website
 
 ## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
 
 ```text
 /
 ├── public/
+│   ├── images/
 │   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   ├── Header.astro
+│   │   ├── Footer.astro
+│   │   └── Navigation.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+│       ├── index.astro
+│       ├── flight-training/
+│       │   ├── general-information.astro
+│       │   ├── ground-school.astro
+│       │   └── partner-flight-school.astro
+│       ├── events-activities/
+│       │   ├── pilot-for-a-day.astro
+│       │   ├── skydiving.astro
+│       │   └── flight-simulators.astro
+│       ├── about-us/
+│       │   ├── our-team.astro
+│       │   ├── founders-history.astro
+│       │   └── past-executives.astro
+│       ├── social-media/
+│       │   ├── facebook.astro
+│       │   ├── instagram.astro
+│       │   ├── twitter.astro
+│       │   └── youtube.astro
+│       ├── contact.astro
+│       └── apply.astro
 └── package.json
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
 ## 🧞 Commands
 
@@ -43,6 +51,27 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 📝 Content Sections
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The website is organized into the following main sections:
+
+1. **Home** - Landing page with main hero sections and club introduction
+2. **Flight Training**
+   - General Information
+   - Ground School
+   - Partner Flight School
+3. **Events & Activities**
+   - Pilot for a Day
+   - Skydiving
+   - Flight Simulators
+4. **About Us**
+   - Our Team
+   - Founders & History
+   - Past Executives
+5. **Social Media**
+   - Facebook
+   - Instagram
+   - Twitter
+   - YouTube
+6. **Contact Us** - Contact information and form
+7. **Apply** - Membership application page
