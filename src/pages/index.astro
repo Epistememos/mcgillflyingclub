@@ -1,11 +1,206 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import { Image } from 'astro:assets';
+import Navigation from '../components/Navigation.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import banner1 from '../assets/images/banner1.JPG';
+import banner2 from '../assets/images/banner2.JPG';
+import banner3 from '../assets/images/banner3.JPG';
+import banner4 from '../assets/images/banner4.JPG';
+import banner5 from '../assets/images/banner5.JPG';
+import experience1 from '../assets/images/experience1.JPG';
 ---
 
 <Layout>
-	<Welcome />
+	<Navigation />
+	<section id="banner" class="relative overflow-hidden">
+		<div class="carousel-container relative">
+			<div class="carousel-slides flex transition-transform duration-500 ease-in-out">
+				<article class="carousel-slide min-w-full relative h-132">
+					<Image src={banner1} alt="Tame Your Passion" class="w-full h-full object-cover" />
+					<div class="absolute inset-0  flex items-end justify-center">
+						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
+							<h2 class="text-4xl font-roboto ">TAME YOUR PASSION</h2>
+						</div>
+					</div>
+				</article>
+				<article class="carousel-slide min-w-full relative h-132">
+					<Image src={banner2}  alt="Live On The Edge" class="w-full h-full object-cover"/>
+					<div class="absolute inset-0 flex items-end justify-center">
+						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
+							<h2 class="text-4xl font-roboto ">LIVE ON THE EDGE</h2>
+						</div>
+					</div>
+				</article>
+				<article class="carousel-slide min-w-full relative h-132">
+					<Image src={banner3}  alt="Become a Pilot" class="w-full h-full object-cover" />
+					<div class="absolute inset-0  flex items-end justify-center">
+						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
+							<h2 class="text-4xl font-roboto ">BECOME A PILOT</h2>
+						</div>
+					</div>
+				</article>
+				<article class="carousel-slide min-w-full relative h-132">
+					<Image src={banner4}  alt="Involve Yourself" class="w-full h-full object-cover" />
+					<div class="absolute inset-0  flex items-end justify-center">
+						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
+							<h2 class="text-4xl font-roboto ">INVOLVE YOURSELF</h2>
+						</div>
+					</div>
+				</article>
+				<article class="carousel-slide min-w-full relative h-132">
+					<Image src={banner5}  alt="Meet Awesome People" class="w-full h-full object-cover" />
+					<div class="absolute inset-0  flex items-end justify-center">
+						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
+							<h2 class="text-4xl font-roboto ">MEET AWESOME PEOPLE</h2>
+						</div>
+					</div>
+				</article>
+			</div>
+			
+			<!-- Navigation Arrows -->
+			<button class="carousel-btn prev absolute left-4 bottom-2 text-white p-2 rounded-full transition-all duration-200 hover:text-red-400">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+				</svg>
+			</button>
+			<button class="carousel-btn next absolute right-4 bottom-2 text-white p-2 rounded-full transition-all duration-200 hover:text-red-400">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+				</svg>
+			</button>
+		</div>
+	</section>
+	<section id="overview" class="relative overflow-hidden">
+		<div class="container mx-auto px-30 py-8">
+			<h2 class="text-5xl text-center font-bold  text-white font-inter">making flying accessible</h2>
+			<p class="text-2xl text-white text-justify font-inter font-light py-4">
+				Our mission is to make aviation accessible to everyone by providing affordable flight training, fostering a community of passionate aviators, and inspiring the next generation of pilots. Through education, shared resources, and a love of flight, we break down barriers so that more people can experience the freedom and joy of flying.
+			</p>
+			<h2 class="text-4xl text-center font-bold  text-white font-inter">because the sky belongs to everyone</h2>
+		</div>
+		<div class="container mx-auto px-8 py-4">
+			<div class="w-full max-w-3xl mx-auto aspect-video">
+				<iframe
+					src="https://www.youtube.com/embed/E-IyJ2PLVhY"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+					class="w-full h-full"
+				></iframe>
+			</div>
+		</div>
+	</section>
+	<section id="experiences" class="relative overflow-hidden">
+		<div class="container mx-auto px-30 ">
+			<h2 class="text-5xl text-center font-bold  text-white font-inter">experiences</h2>
+			<div>
+				<div class="flex flex-row justify-center my-12 mx-36 gap-12">
+					<Image src={experience1} alt="experience1" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
+					<div class="w-1/2 h-full">
+						<h3 class="text-2xl font-bold text-white font-inter">discovery flights</h3>
+						<p class="text-white font-inter text-justify py-2">
+							Up to 3 passengers can enjoy a breathtaking flight over Montreal, the Laurentians, or to a gourmet brunch destination. Sit back, relax, and take in the views from above!
+						</p>
+						<div class="flex flex-row gap-4">
+							<button class="bg-white text-md text-black px-4 py-2 rounded-md w-30">learn more</button>
+							<button class="bg-black text-md text-white px-4 py-2 rounded-md w-30">book now</button>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-row justify-center my-12 mx-36 gap-12">
+					
+					<div class="w-1/2 h-full">
+						<h3 class="text-2xl font-bold text-white font-inter text-right">skydiving</h3>
+						<p class="text-white font-inter text-justify py-2">
+							We host full-day skydiving trips for groups of up to 40 university students at our Joliette location. Experience tandem jumps with certified instructors, then unwind in our beach-inspired lounge area. We also do indoor skydiving.
+						</p>
+						<div class="flex flex-row gap-4 justify-end">
+							<button class="bg-black text-md text-white px-4 py-2 rounded-md w-30">sign up</button>
+							<button class="bg-white text-md text-black px-4 py-2 rounded-md w-30">learn more</button>
+						</div>
+					</div>
+					<Image src={experience1} alt="experience1" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const carousel = document.querySelector('.carousel-slides')!;
+			const slides = document.querySelectorAll('.carousel-slide');
+			const dots = document.querySelectorAll('.carousel-dot');
+			const prevBtn = document.querySelector('.carousel-btn.prev')!;
+			const nextBtn = document.querySelector('.carousel-btn.next')!;
+			
+			let currentSlide = 0;
+			const totalSlides = slides.length;
+			let autoPlayInterval: ReturnType<typeof setInterval> | undefined;
+			
+			function updateCarousel() {
+				(carousel as HTMLElement).style.transform = `translateX(-${currentSlide * 100}%)`;
+				
+				// Update dots
+				dots.forEach((dot, index: number) => {
+					dot.classList.toggle('bg-opacity-100', index === currentSlide);
+					dot.classList.toggle('bg-opacity-60', index !== currentSlide);
+				});
+			}
+			
+			function nextSlide() {
+				currentSlide = (currentSlide + 1) % totalSlides;
+				updateCarousel();
+			}
+			
+			function prevSlide() {
+				currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+				updateCarousel();
+			}
+			
+			function goToSlide(index: number) {
+				currentSlide = index;
+				updateCarousel();
+			}
+			
+			function startAutoPlay() {
+				autoPlayInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+			}
+			
+			function stopAutoPlay() {
+				if (autoPlayInterval) {
+					clearInterval(autoPlayInterval);
+					autoPlayInterval = undefined;
+				}
+			}
+			
+			// Event listeners
+			(prevBtn as HTMLButtonElement).addEventListener('click', () => {
+				prevSlide();
+				stopAutoPlay();
+				startAutoPlay();
+			});
+			
+			(nextBtn as HTMLButtonElement).addEventListener('click', () => {
+				nextSlide();
+				stopAutoPlay();
+				startAutoPlay();
+			});
+			
+			dots.forEach((dot, index: number) => {
+				dot.addEventListener('click', () => {
+					goToSlide(index);
+					stopAutoPlay();
+					startAutoPlay();
+				});
+			});
+			
+			// Pause auto-play on hover
+			(carousel as HTMLElement).addEventListener('mouseenter', stopAutoPlay);
+			(carousel as HTMLElement).addEventListener('mouseleave', startAutoPlay);
+			
+			// Start auto-play
+			startAutoPlay();
+		});
+	</script>
 </Layout>
