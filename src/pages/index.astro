@@ -8,6 +8,17 @@ import banner3 from '../assets/images/banner3.JPG';
 import banner4 from '../assets/images/banner4.JPG';
 import banner5 from '../assets/images/banner5.JPG';
 import experience1 from '../assets/images/experience1.JPG';
+import experience2 from '../assets/images/experience2.JPG';
+import experience3 from '../assets/images/experience3.JPG';
+import experience4 from '../assets/images/experience4.JPG';
+import training1 from '../assets/images/training1.JPG';
+import training2 from '../assets/images/training2.JPG';
+import alm_logo from '../assets/images/alm-logo.png';
+import voltige_logo from '../assets/images/voltige-logo.png';
+import red_canoe_logo from '../assets/images/red-canoe-logo.png';
+import NotionCard from '../components/NotionCard.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
@@ -15,7 +26,7 @@ import experience1 from '../assets/images/experience1.JPG';
 	<section id="banner" class="relative overflow-hidden">
 		<div class="carousel-container relative">
 			<div class="carousel-slides flex transition-transform duration-500 ease-in-out">
-				<article class="carousel-slide min-w-full relative h-132">
+				<article class="carousel-slide min-w-full relative aspect-3/1">
 					<Image src={banner1} alt="Tame Your Passion" class="w-full h-full object-cover" />
 					<div class="absolute inset-0  flex items-end justify-center">
 						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
@@ -23,7 +34,7 @@ import experience1 from '../assets/images/experience1.JPG';
 						</div>
 					</div>
 				</article>
-				<article class="carousel-slide min-w-full relative h-132">
+				<article class="carousel-slide min-w-full relative aspect-3/1">
 					<Image src={banner2}  alt="Live On The Edge" class="w-full h-full object-cover"/>
 					<div class="absolute inset-0 flex items-end justify-center">
 						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
@@ -31,7 +42,7 @@ import experience1 from '../assets/images/experience1.JPG';
 						</div>
 					</div>
 				</article>
-				<article class="carousel-slide min-w-full relative h-132">
+				<article class="carousel-slide min-w-full relative aspect-3/1">
 					<Image src={banner3}  alt="Become a Pilot" class="w-full h-full object-cover" />
 					<div class="absolute inset-0  flex items-end justify-center">
 						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
@@ -39,7 +50,7 @@ import experience1 from '../assets/images/experience1.JPG';
 						</div>
 					</div>
 				</article>
-				<article class="carousel-slide min-w-full relative h-132">
+				<article class="carousel-slide min-w-full relative aspect-3/1">
 					<Image src={banner4}  alt="Involve Yourself" class="w-full h-full object-cover" />
 					<div class="absolute inset-0  flex items-end justify-center">
 						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
@@ -47,7 +58,7 @@ import experience1 from '../assets/images/experience1.JPG';
 						</div>
 					</div>
 				</article>
-				<article class="carousel-slide min-w-full relative h-132">
+				<article class="carousel-slide min-w-full relative aspect-3/1">
 					<Image src={banner5}  alt="Meet Awesome People" class="w-full h-full object-cover" />
 					<div class="absolute inset-0  flex items-end justify-center">
 						<div class="text-center text-white bg-zinc-950/30 w-full py-2">
@@ -92,11 +103,12 @@ import experience1 from '../assets/images/experience1.JPG';
 		</div>
 	</section>
 	<section id="experiences" class="relative overflow-hidden">
+		<!-- experiences -->
 		<div class="container mx-auto px-30 ">
 			<h2 class="text-5xl text-center font-bold  text-white font-inter">experiences</h2>
 			<div>
 				<div class="flex flex-row justify-center my-12 mx-36 gap-12">
-					<Image src={experience1} alt="experience1" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
+					<Image src={experience1} alt="pilots in a cessna" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
 					<div class="w-1/2 h-full">
 						<h3 class="text-2xl font-bold text-white font-inter">discovery flights</h3>
 						<p class="text-white font-inter text-justify py-2">
@@ -120,11 +132,169 @@ import experience1 from '../assets/images/experience1.JPG';
 							<button class="bg-white text-md text-black px-4 py-2 rounded-md w-30">learn more</button>
 						</div>
 					</div>
-					<Image src={experience1} alt="experience1" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
+					<Image src={experience2} alt="skydiving students entering a plane" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
+				</div>
+				<div class="flex flex-row justify-center my-12 mx-36 gap-12">
+					<Image src={experience3} alt="simulator" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
+					<div class="w-1/2 h-full">
+						<h3 class="text-2xl font-bold text-white font-inter">simulator nights</h3>
+						<p class="text-white font-inter text-justify py-2">
+							Gather your crew (up to 20 aviators) for an epic evening in the cockpit! Our  flight sims let you pilot jets, navigate storms, and maybe even "crash" (safely!).  No experience needed!
+						</p>
+						<div class="flex flex-row gap-4">
+							<button class="bg-white text-md text-black px-4 py-2 rounded-md w-30">learn more</button>
+							<button class="bg-black text-md text-white px-4 py-2 rounded-md w-30">sign up</button>
+						</div>
+					</div>
+				</div>
+				<div class="flex flex-row justify-center my-12 mx-36 gap-12">
+					
+					<div class="w-1/2 h-full">
+						<h3 class="text-2xl font-bold text-white font-inter text-right">socials</h3>
+						<p class="text-white font-inter text-justify py-2">
+							We host casual gatherings for university students, including movie screenings, game nights, outdoor picnics, and aviation themed parties. 
+						</p>
+						<div class="flex flex-row gap-4 justify-end">
+							<button class="bg-black text-md text-white px-4 py-2 rounded-md w-30">next event</button>
+							<button class="bg-white text-md text-black px-4 py-2 rounded-md w-30">learn more</button>
+						</div>
+					</div>
+					<Image src={experience4} alt="skydiving students entering a plane" class="w-1/2 aspect-3/2 object-cover rounded-lg " />
 				</div>
 			</div>
 		</div>
 	</section>
+	<section id="training" class="relative overflow-hidden">
+		<!-- training -->
+		<div class="container mx-auto px-30 ">
+			<h2 class="text-5xl text-center font-bold  text-white font-inter">training</h2>
+			<div class="flex flex-col justify-center my-12 mx-16 gap-12">
+				<h3 class="text-2xl text-white font-inter">Our <b>PPL program </b> includes structured ground school and practical flight training in partnership with certified flight schools. </h3>
+				<div class="flex flex-row gap-4 between">
+					<div class="flex flex-col  gap-4 w-1/2">
+						<div class="relative w-full aspect-square">
+							<Image src={training1} alt="training1" class="w-full aspect-square object-cover object-center rounded-lg" />
+							<div class="absolute bottom-4 left-4 flex gap-2">
+								<button class="bg-white text-black px-3 py-1 rounded-md text-sm font-semibold shadow">learn more</button>
+								<button class="bg-black text-white px-3 py-1 rounded-md text-sm font-semibold shadow">sign up</button>
+							</div>
+						</div>
+						<p class="text-white font-inter text-justify">
+							<span class="text-3xl font-bold">ground school</span>
+							<span class="text-xl font-cursive"> – the theory</span>
+						</p>
+					</div>
+					<div class="flex flex-col gap-4 w-1/2">
+						<div class="relative w-full aspect-square">
+							<Image src={training2} alt="training1" class="w-full aspect-square object-cover object-center rounded-lg" />
+							<div class="absolute bottom-4 left-4 flex gap-2">
+								<button class="bg-white text-black px-3 py-1 rounded-md text-sm font-semibold shadow">learn more</button>
+								<button class="bg-black text-white px-3 py-1 rounded-md text-sm font-semibold shadow">sign up</button>
+							</div>
+						</div>
+						<p class="text-white font-inter text-justify">
+							<span class="text-3xl font-bold">flight training</span>
+							<span class="text-xl font-cursive"> – the practice</span>
+						</p>
+					</div>
+				</div>
+				<h3 class="text-2xl text-white font-inter">Our <b>Skydiving License Program</b> includes structured ground school and practical jump training with certified instructors.</h3>
+				<div class="flex flex-col  gap-4 w-full">
+					<div class="relative w-full">
+						<video src="/src/assets/skydive.mp4" class="w-full aspect-2/1 object-cover object-center rounded-lg" autoplay loop muted playsinline>
+							Sorry, your browser does not support embedded videos.
+						</video>
+						<div class="absolute bottom-4 right-4 flex gap-2">
+							<button class="bg-white text-black px-5 py-2 rounded-md text-md font-semibold shadow-md">learn more</button>
+							<button class="bg-black text-white px-5 py-2 rounded-md text-md font-semibold shadow-md">sign up</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="join" class="relative overflow-hidden">
+		<div class="container mx-auto px-30 ">
+			<h2 class="text-5xl text-center font-bold  text-white font-inter">partners</h2>
+			<div class="flex flex-col justify-center my-12 mx-16 gap-8">
+				<h3 class="text-2xl text-white font-inter">
+					Our partners are essential to our mission. They help us provide the best training and experiences for our students.
+				</h3>	
+				<div class="flex flex-row gap-4 justify-center">
+					<NotionCard
+						title="ALM Par Avion"
+						image={alm_logo}
+						imageAlt="ALM par avion logo"
+						size="large"
+						properties={{
+							"Type": {
+								type: "select",
+								value: "Training Partner",
+								color: "green"
+							},
+							"Tier": {
+								type: "select",
+								value: "Gold",
+								color: "yellow"
+							},
+							"Website": {
+								type: "url",
+								value: "https://almparavion.ca"
+							}
+						}}
+					/>
+					<NotionCard
+						title="Parachute Voltige"
+						image={voltige_logo}
+						imageAlt="Parachute Voltige logo"
+						size="large"
+						imageBg="bg-white"
+						properties={{
+							"Type": {
+								type: "select",
+								value: "Training Partner",
+								color: "green"
+							},
+							"Tier": {
+								type: "select",
+								value: "Bronze",
+								color: "orange"
+							},
+							"Website": {
+								type: "url",
+								value: "https://parachutevoltige.com"
+							}
+						}}
+					/>
+					<NotionCard
+						title="Red Canoe"
+						image={red_canoe_logo}
+						imageAlt="Red Canoe logo"
+						size="large"
+						properties={{
+							"Type": {
+								type: "select",
+								value: "Gear Provider",
+								color: "purple"
+							},
+							"Tier": {
+								type: "select",
+								value: "Silver",
+								color: "gray"
+							},
+							"Website": {
+								type: "url",
+								value: "https://redcanoebrands.com/"
+							}
+						}}
+					/>
+				</div>
+				
+			</div>
+
+	</section>
+
+	<Footer />
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
