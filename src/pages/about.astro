@@ -1,0 +1,974 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import ExecutiveCard from '../components/ExecutiveCard.astro';
+import youdas from '../assets/images/execs/youdasY.JPG';
+import estelleH from '../assets/images/execs/estelleH.JPG';
+import luc from '../assets/images/execs/lucF.JPG';
+import margot from '../assets/images/execs/margotV.JPG';
+import jocelyn from '../assets/images/execs/jocelynE.JPG';
+import lutmingW from '../assets/images/execs/lutmingW.png';
+import meiriT from '../assets/images/execs/meiriT.jpg';
+import brigitC from '../assets/images/execs/brigitC.jpg';
+import Haoning_Qu from '../assets/images/execs/haoningQ.jpg';
+import celineO from '../assets/images/execs/celineO.jpg';
+import madisonS from '../assets/images/execs/madisonS.jpg';
+import rumiA from '../assets/images/execs/rumiA.jpg';
+import sarielC from '../assets/images/execs/sarielC.jpg';
+import luisA from '../assets/images/execs/luisA.jpg';
+import zephirL from '../assets/images/execs/zephirL.jpg';
+import jamesT from '../assets/images/execs/jamesT.jpg';
+import bruceM from '../assets/images/execs/bruceM.jpg';
+import jamesC from '../assets/images/execs/jamesC.jpg';
+import arekFround from '../assets/images/execs/arekFround.jpg';
+import justinM from '../assets/images/execs/justinM.jpg';
+import annalavigne from '../assets/images/execs/annalavigne.jpg';
+import davidA from '../assets/images/execs/davidA.jpg';
+import amoughKulkarni from '../assets/images/execs/amoughKulkarni.jpg';
+import celinaW from '../assets/images/execs/celinaW.jpg';
+import nirvairC from '../assets/images/execs/nirvairC.jpg';
+import theoV from '../assets/images/execs/theoV.jpg';
+import laurenN from '../assets/images/execs/laurenN.JPG';
+import aliN from '../assets/images/execs/aliN.jpg';
+import sebastianM from '../assets/images/execs/sebastianM.jpg';
+import kariR from '../assets/images/execs/kariR.jpg';
+import salmanH from '../assets/images/execs/salmanH.jpg';
+import guyH from '../assets/images/execs/guyH.jpg';
+import farzanS from '../assets/images/execs/farzanS.jpg';
+import josephH from '../assets/images/execs/josephH.jpg';
+import justinB from '../assets/images/execs/justinB.jpg';
+import daniilL from '../assets/images/execs/daniilL.jpg';
+import alexF from '../assets/images/execs/alexF.jpg';
+import suS from '../assets/images/execs/suS.jpg';
+import emanuelU from '../assets/images/execs/emanuelU.jpg';
+import huzaifaK from '../assets/images/execs/huzaifaK.jpg';
+import laraG from '../assets/images/execs/laraG.jpg';
+import joshuaP from '../assets/images/execs/joshuaP.jpg';
+import grishB from '../assets/images/execs/grishB.jpg';
+import about1 from '../assets/images/about1.jpg';
+import about2 from '../assets/images/about2.jpg';
+import about3 from '../assets/images/about3.jpg';
+import valentineH from '../assets/images/execs/valentineH.JPG';
+import annaL from '../assets/images/execs/annaL.jpg';
+
+---
+
+<Layout>
+  <Navigation />
+  <section class="bg-zinc-950 min-h-screen">
+    <div class="flex flex-row justify-center w-full aspect-3/1">
+      <Image src={about1} alt="Historic club event" class="w-1/3 h-full object-cover  shadow-md" />
+      <Image src={about2} alt="Flight training session" class=" w-1/3 h-full object-cover shadow-md" />
+      <Image src={about3} alt="Club members at airport" class="w-1/3 h-full object-cover shadow-md" />
+    </div>
+    <div class="container mx-auto px-6 max-w-8xl pt-4">
+      
+      <h1 class="text-7xl font-bold text-white m-15 text-center">about us</h1>
+
+      <!-- Club History -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-semibold text-white font-inter mb-4">club history</h2>
+        <p class="text-zinc-200 text-lg leading-relaxed text-justify">
+          The McGill Students' Flying Club originated from the 1950s Flying and Navigation Club where students practiced navigational techniques. After rediscovering these archives, the club was re-established in March 2012 under the McGill Engineering Undergraduate Society. Since its revival, the club has grown significantly, overcoming challenges like the COVID-19 pandemic while expanding partnerships and programming.
+          <br/><br/>
+          With roots dating back to the 1950s, the McGill Flying Club has a long tradition of making aviation accessible. What began with group flights and ground school sessions has evolved into a vibrant community serving aspiring pilots and aviation enthusiasts. Over decades, the club has facilitated countless discovery flights, training programs, and social events, helping generations of students begin their aviation journeys.
+          <br/><br/>
+          Today, the MSFC continues this legacy as an active student organization that makes flight training affordable and accessible while fostering passion for aviation. The club maintains its original spirit of knowledge-sharing and community that began over 70 years ago.
+        </p>
+      </div>
+
+      <!-- Current Team -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-semibold text-white font-inter mb-4">current team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ExecutiveCard 
+            name="Youdas Yessad" 
+            role="President" 
+            image={youdas}
+            years="2025-2026" 
+            bio="BEng. Software Engineering, 2027"
+            description="Youdas started his journey in the Royal Canadian Air Cadet Program where he obtained his Private Pilot License. He is working towards his night rating. He likes coding projects, boxing, riding his motorcycle and pulling crazy stunts like running an ultramarathon at 4AM."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "PPL", color: "blue" },
+                  { value: "Night Rating", color: "yellow" }
+                ]
+              },
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/youdas-yessad"
+              },
+              "Past Positions": {
+                type: "multi-select",
+                value: [
+                  { value: "VP Finance 2024-2025", color: "green" },
+                  { value: "VP Events 2023-2024", color: "yellow" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Aerobatics", color: "blue" },
+                  { value: "Boxing", color: "red" },
+                  { value: "Motorcycles", color: "yellow" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Estelle Huy"
+            role="President"
+            years="2025-2026"
+            image= {estelleH}
+            bio="BEng. Mechanical Engineering, 2026"
+            description="Estelle's aviation journey started with fear, but curiosity quickly took over. She earned her Private Pilot License before starting university and has been flying ever since.When she’s not in the air or deep in engineering projects, Estelle works as an event photographer, always bringing her camera along on the club’s latest adventures."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "PPL", color: "purple" }
+                ]
+              },
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/estelle-huy?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              },
+              "Past Positions": {
+                type: "multi-select",
+                value: [
+                  { value: "President 2023-2025", color: "blue" },
+                  { value: "VP Events 2022-2023", color: "pink" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Aerobatics", color: "orange" },
+                  { value: "Photography", color: "green" },
+                  { value: "Travel", color: "pink" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Valentine Huy"
+            role="VP Sponsorship"
+            years="2025-2026"
+            image={valentineH}
+            bio="BEng. Mechanical Engineering, 2026"
+            description="Valentine earned her private pilot license at 17 while balancing high school, and national-level kayaking. Since arriving in Montreal, she has combined her passion for aviation, engineering, and leadership in and out of the classroom. As Co-Captain of McGill Formula Electric, Valentine has led a team to design, build, and race high-performance electric race cars in international competitions. Alongside her passion for aviation, Valentine is deeply interested in entrepreneurship and has co-founded two ventures through McGill’s TechAccel program. Outside of flying and engineering, she records episodes of her Le Trio podcast with her twin sister and brother, explores the outdoors, and enjoys bringing people together around ambitious projects."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "PPL", color: "yellow" }
+                ]
+              },
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/valentine-huy-3113331b2/"
+              },
+              "Past Positions": {
+                type: "multi-select",
+                value: [
+                  { value: "VP Flight Operations 2023-2025", color: "brown" },
+                  { value: "VP Events 2022-2023", color: "pink" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Podcasting", color: "brown" },
+                  { value: "Sports", color: "blue" },
+                  { value: "Formula Electric", color: "red" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Anna Lavigne"
+            role="VP Internal"
+            image={annaL}
+            years="2025-2026"
+            bio="BA. Political Science, 2026"
+            description="Anna was fascinated by planes for a very long time, she decided to book a discovery flight during the pandemic and completely fell in love with flying. While she’s still a student pilot and not officially licensed (yet!), she aims to finish her PPL this year. Aside from flying, Anna enjoys studying and researching defence policy and military aviation history, as well as writing and drawing her own comics. One of her goals is to own her own aerobatic plane and to fly in airshows!"
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "Student Pilot", color: "gray" }
+                ]
+              },
+              "Past Positions": {
+                type: "multi-select",
+                value: [
+                  { value: "VP Events 2023-2025", color: "purple" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Defence Policy", color: "green" },
+                  { value: "Military Aviation History", color: "purple" },
+                  { value: "Comics", color: "orange" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Luc Francis"
+            role="VP External"
+            image={luc}
+            years="2025-2026"
+            bio="BA. Computer Science, 2027"
+            description="Luc started flying gliders at the age of 14 and earned his PPL at 17. Whether it's aerobatics, backcountry flying or just grabbing a $100 hamburger, he is always happiest in the skies. When not flying, he's always working on a software side project - often aviation-related - and wrenching on 25-year-old Japanese sports cars. Most of all though, he enjoys sharing his passions with others and connecting with like-minded enthusiasts."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "PPL", color: "red" },
+                  { value: "Glider", color: "gray" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Software Projects", color: "yellow" },
+                  { value: "Backcountry Flying", color: "blue" },
+                  { value: "Cars", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Brigit Crumley"
+            role="VP Finance"
+            years="2025-2026"
+            bio="BEng. Mechanical Engineering, 2027"
+            image={brigitC}
+            description="Brigit'spassion for aviation began watching the Snowbirds flybys of Parliament Hill every year on Canada Day. She then participated in the Royal Canadian Air Cadets program and is now a pilot-in-training for the Royal Canadian Air Force. In her free time, you'll find her at airshows, climbing, and hiking."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Canadian Armed Forces", color: "orange" },
+                  { value: "Aviation", color: "gray" },
+                  { value: "Astronauts", color: "green" }
+                ]
+              },
+              "Past Positions": {
+                type: "multi-select",
+                value: [
+                  { value: "VP Communications 2023-2024", color: "yellow" },
+                ]
+              },
+            }}
+          />
+        
+          <ExecutiveCard 
+            name="Margot Van Zon"
+            role="Director of Flight Operations"
+            image={margot}
+            years="2025-2026"
+            bio="BA. Economics and Politics, 2026"
+            description="Margot started flying at the age of 16 and obtained her Private Pilot Licence (but is still working on getting her driving licence). With a strong passion for aviation, she hopes to become an airline pilot in the near future. In her spare time, Margot enjoys reading, travelling, and occasionally practising some Muay Thai."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "PPL", color: "pink" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Reading", color: "purple" },
+                  { value: "Travelling", color: "yellow" },
+                  { value: "Muay Thai", color: "brown" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Jocelyn Edleman"
+            role="Director of Ground School"
+            image={jocelyn}
+            years="2025-2026"
+            bio="BSc. Chemistry, 2026"
+            description="Jocelyn became interested in aviation because she wants to be able to travel to remote places. In the winter and spring of 2025 she completed ground school through the program offered by the McGill Flying Club and is working on getting her PPL. After that, she would love to earn her seaplane/float rating. Outside of school, she enjoys sailing with her dad, going for late-night walks, and doing crossword puzzles. After McGill, Jocelyn plans to work for a year or two before going back to either medical school or grad school."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "Ground School", color: "orange" }
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Sailing", color: "blue" },
+                  { value: "Late-night Walks", color: "red" },
+                  { value: "Crossword Puzzles", color: "green" }
+                ]
+              }
+            }}
+          />
+          
+          <ExecutiveCard 
+            name="Hayagrish Balaji"
+            role="Executive Director"
+            years="2025-2026"
+            image={grishB}
+            bio="M1 MBA, Licensed Electrical & Computer Engineer, Senior Consultant"
+            description="Grish grew up glued to airplane videos, he made his dream a reality by earning his Private Pilot License in 2023 and Night Rating in 2024. He’s now aiming for his Float Rating, and IFR. A thrill-seeker at heart, Grish is also pursuing his solo skydiving and deep sea diving certification. Professionally, he’s a licensed Electrical and Computer Engineer, and serves as a Senior Consultant for SMEs. Always chasing the next challenge, he blends technical expertise with creativity and humor—earning a reputation for being both inspiring and fun to be around. Trained under some of Canada’s top CFIs, he brings passion and strategic insight to every cockpit, boardroom, or brainstorming session. When he’s not flying or working, you’ll find him planning his next adventure, playing badminton or trading stocks."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "PPL", color: "blue" },
+                  { value: "Night Rating", color: "yellow" },
+                ]
+              },
+              "LinkedIn": {
+                type: "url",
+                value: "linkedin.com/in/hayagrishbalaji/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Skydiving", color: "gray" },
+                  { value: "Deep Sea Diving", color: "brown" },
+                  { value: "Consulting", color: "blue" },
+                  { value: "Badminton", color: "yellow" },
+                ]
+              },
+              "Past Positions": {
+                type: "multi-select",
+                value: [
+                  { value: "Executive Director 2023-2025", color: "green" }
+                ]
+              },
+            }}
+          />
+        </div>
+      </div>
+
+      <!-- Past Executives -->
+      <div>
+        <h2 class="text-3xl font-semibold text-white mb-4">past executives</h2>
+        <p class="text-xl font-semibold text-white mb-4" >Our club’s journey wouldn’t be possible without the dedication and vision of our past executives. Here’s a look at the leaders whose unique contributions have shaped the club into what it is today.</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <ExecutiveCard 
+            name="Lutming Wong"
+            role="Past Executive"
+            image={lutmingW}
+            description="Lutming played flight simulator since the age of 10 and had more than a decade of flight simulator experience. What inspired him to fly was his father, who worked as an air traffic controller. He was brought to the airport and into the tower quite often to spot planes when he was a little kid. Lutming trained to get his pilot’s license in the not-so-far future; aviation was his dream, and nothing could stop him from pursuing that dream. He wished to become an airline pilot one day."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Flight Simulation", color: "red" },
+                  { value: "Aviation", color: "green" },
+                  { value: "Air Traffic Control", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Meiri Tsuruzono"
+            role="VP Events 2023-2024"
+            image={meiriT}
+            description="Meiri was the VP Events for the 2023-2024 year. Aviation was always an irreplaceable part of her life, and she hoped to take part in organising exciting events for fellow aviation lovers that year. Besides aviation, her passions were travelling, playing the violin, listening to jazz, and musical theatre."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Aviation", color: "yellow" },
+                  { value: "Travelling", color: "pink" },
+                  { value: "Violin", color: "purple" }
+                ]
+              }
+            }}
+          />
+          
+          <ExecutiveCard 
+            name="Haoning Qu"
+            role="Past Executive"
+            image={Haoning_Qu}
+            description="Haoning graduated with a major in biology and completed his Chief Flight Instructor’s rating. What started out as a hobby rapidly turned into a second career about midway through his private pilot’s license. Since then, he progressed along the traditional 'pilot pipeline' collecting his commercial pilot’s license, group 3 instrument rating, and multi-engine rating. As the most experienced MSFC member, he aimed to harness the potential offered by that year’s fresh and incredibly diverse team to reinvigorate the MSFC and ensure that it continued to flourish in its second decade."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Biology", color: "blue" },
+                  { value: "Flight Instruction", color: "brown" },
+                  { value: "Aviation", color: "red" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Celina Wan"
+            role="Past Executive"
+            image={celinaW}
+            description="Celina was a mining engineering student with a B.Sc. in Biology and mathematics. She spent her summer weekends skydiving and enjoyed packing parachutes. In class, she fantasized about flying instead of listening to her lecture. When she was not skydiving, she enjoyed cooking, going to the gym and attempted to make her pole dance moves look good but looked more like a clumsy panda sliding down its bamboo."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://ca.linkedin.com/in/AFarns"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Skydiving", color: "yellow" },
+                  { value: "Biology", color: "green" },
+                  { value: "Mathematics", color: "purple" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Daniil Lusus"
+            role="Past Executive"
+            image={daniilL}
+            description="Daniil wanted to one day get a Private Pilot's License and skydiving qualification. He was also passionate about aeronautics and aerospace, and hoped to one day work in the space sector. In his free time, he could be found playing intramural volleyball, reading and building rockets."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/madison-s-7a095614b/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Mechanical Engineering", color: "pink" },
+                  { value: "German", color: "orange" },
+                  { value: "Computer Science", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Su Su"
+            role="Past Executive"
+            image={suS}
+            description="Su loved sports and trying new activities like skydiving. Her dream was to scuba dive and skydive around the world. Fun fact: holidays for her meant diving."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://ca.linkedin.com/in/susu13"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Materials Engineering", color: "brown" },
+                  { value: "Pharmacology", color: "red" },
+                  { value: "Sports", color: "yellow" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Nirvair Chawla"
+            role="Past Executive"
+            image={nirvairC}
+            description="Nirvair was involved in MSFC's marketing efforts. She studied Biology at Concordia and was a management student at McGill."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Marketing", color: "blue" },
+                  { value: "Biology", color: "orange" },
+                  { value: "Management", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Justin Berube"
+            role="Past Executive"
+            image={justinB}
+            description="Justin was the fourth co-president along with Alex Farnsworth. He started his aviation ambitions with the Royal Canadian Air Cadets, flying since he was 16 years old, and obtained his Private Pilot License (PPL) at 17. He taught the theory of flight at his local squadron until he aged out, and occasionally flew at the Saint-Jean-sur-Richelieu airport. When on the ground, Justin was active in Canadian politics, traveled, and was involved with local and student life. Interesting Fact: Justin also played the Great Highland Bagpipes (and wore the kilt too!)."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://ca.linkedin.com/in/JustBerube"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Aviation", color: "gray" },
+                  { value: "Air Cadets", color: "yellow" },
+                  { value: "Theory of Flight", color: "purple" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Theo Vala"
+            role="VP Finance"
+            image={theoV}
+            description="Théo was VP Finance at MSFC. He was a second year Management student studying Marketing and Information Systems. He was born in Paris, France but moved at the age of 8 to Atlanta, GA. After spending his middle and high school years in the USA, he chose to attend McGill University. His passion for aviation stuck with him throughout his entire life, and after discovering that McGill had a Flying Club, he directly applied for an exec position, as well as PPL classes. He did a three year internship at Delta Airlines, and hoped to one day work within this fascinating aviation industry. Other than his passion for aviation, Théo was an avid skier as well as being a drummer for 10 years."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Finance", color: "green" },
+                  { value: "Marketing", color: "red" },
+                  { value: "Information Systems", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Emanuel Uzan"
+            role="Past Executive"
+            image={emanuelU}
+          />
+          <ExecutiveCard 
+            name="Huzaifa Khanani"
+            role="Past Executive"
+            image={huzaifaK}
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://ca.linkedin.com/in/susu13"
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Lara Goxhaj"
+            role="Ground School Coordinator"
+            image={laraG}
+            description="Lara was a Ground School coordinator at MSFC. She studied Computer Science and Physics at McGill. She had a regular habit of being drawn into diverse projects, and could often be found working on applications of artificial intelligence, ultrafast transportation technologies, and anything tech or science related that caught her fancy. When taking a breather from her many projects, she could be found painting, working on her bike, or headed on outdoor adventures."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/laragoxhaj"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Computer Science", color: "green" },
+                  { value: "Physics", color: "blue" },
+                  { value: "Artificial Intelligence", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Alex Farnsworth"
+            role="Past Executive"
+            image={alexF}
+            description="Alex served as the fourth co-president along with Justin Berube. He studied electrical engineering at McGill. He grew up in the Kootenays of British Columbia where the mountains were what turned his head towards the sky. He had his Private Pilot's license as well as Glider instructors rating. When he was not doing DPM or trying to figure out C++, he could be found scouting out the latest all-you-can-finish sushi restaurant. Interesting Fact: Every summer Alex taught 15-17 year olds how to fly, and they all got their license!"
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://ca.linkedin.com/in/AFarns"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Pilot for a Day", color: "green" },
+                  { value: "Electrical Engineering", color: "orange" },
+                  { value: "Aviation", color: "pink" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="David Alexander Smith"
+            role="Past Executive"
+            image={davidA}
+            description="David had a passion for everything electrical and aspired to apply his combined knowledge in both fields. He wanted to emphasize safety in aviation while teaching important skills in a safe environment."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/davidaes/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Electrical Engineering", color: "blue" },
+                  { value: "Aviation", color: "blue" },
+                  { value: "Safety", color: "brown" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Celine Oubibet"
+            role="VP Finance"
+            image={celineO}
+            description="Celine always dreamt of flying and wanted to obtain her PPL. She was either in her kitchen baking some fancy dessert, walking outdoors, playing some drum or at the gym."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Finance", color: "orange" },
+                  { value: "Baking", color: "red" },
+                  { value: "Outdoors", color: "purple" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Luis Alvarez"
+            role="VP External"
+            image={luisA}
+            description="Luis Alvarez was a recent architecture graduate. He worked for a few years in Toronto, and upon returning to Montreal, hoped to pass his Architecture Examination Exams and finish his PPL. Besides his passion for design, aviation, and travelling, he loved sports and, if not drawing or flying, could be found playing footy or training for his first Ironman."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Architecture", color: "gray" },
+                  { value: "Aviation", color: "green" },
+                  { value: "Travel", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Zephir Lorne"
+            role="VP Events & Design"
+            image={zephirL}
+            description="Zéphir was a U2 student in Computer Science & Neuroscience. Avid for new challenges and the unexpected, Zéphir took a gap year before entering university to experiment, work, travel, and pass his Private Pilot’s License. Aside from his studies and his passion for aviation, Zéphir enjoyed playing the drums, creating videos, climbing, tinkering, and spending some time in nature. His motto: Be spontaneous, Defy perspectives."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/zephirl/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Computer Science", color: "yellow" },
+                  { value: "Neuroscience", color: "pink" },
+                  { value: "Aviation", color: "brown" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Sariel Coronado"
+            role="VP Events"
+            image={sarielC}
+            description="Sariel was a U3 Mechanical Engineering student with a minor in Computer Science. He was a fan of simulators, flight dynamics, and cloud spotting. His favorite clouds were Kelvin-Helmholtz clouds. Having completed his PPL requirements that summer, all that was left for him to get his license was the flight test."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/amogh-kulkarni-433710158/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Mechanical Engineering", color: "red" },
+                  { value: "Computer Science", color: "blue" },
+                  { value: "Simulators", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Joshua Ptack"
+            role="VP Fundraising"
+            image={joshuaP}
+            description="Josh was a U1 Mechanical Engineering student from Montreal. His passion for aviation drew its roots from growing up on Microsoft Flight Simulator 2002 and its successors. He was a licensed glider and private pilot and continued to instruct in the Royal Canadian Air Cadet program, teaching theory of flight, meteorology and navigation. He also served as a McGill representative in the Regroupement Relève d’Aéro Montréal. He enjoyed playing piano and overspending on food."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Mechanical Engineering", color: "yellow" },
+                  { value: "Aviation", color: "purple" },
+                  { value: "Flight Simulator", color: "orange" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="James Ting"
+            role="VP Web Developer"
+            image={jamesT}
+            description="James was a U3 Science student, and studied a major in Computer Science. Growing up in British Columbia, he always had a fascination with aviation. At the age of 16, he earned his Glider Pilot’s License and earned his Private Pilot’s Licence one year later. He later earned his Night Rating, his Multi-Engine Rating, and worked on his Commercial Pilot License, and Multi-Engine IFR Rating. In his free time, he liked to build software, play intramural ultimate, and experiment with new recipes."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/james-b-ting/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Science", color: "green" },
+                  { value: "Computer Science", color: "gray" },
+                  { value: "Aviation", color: "red" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Bruce Thomas Miles"
+            role="VP Support"
+            image={bruceM}
+            description="Bruce was a U3 Mechanical Engineering student who minored in Software Engineering. He was very passionate about aviation and various aircraft as well as simulation. As a hobby, he enjoyed playing guitar and cooking."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Mechanical Engineering", color: "blue" },
+                  { value: "Software Engineering", color: "pink" },
+                  { value: "Aviation", color: "yellow" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="James Curran"
+            role="VP Ground School"
+            image={jamesC}
+            description="James was the VP Ground School for the McGill Student's Flying Club."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Ground School", color: "green" },
+                  { value: "Aviation", color: "red" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Rumi Ausaf"
+            role="VP Simulator"
+            image={rumiA}
+            description="Rumi was the VP Simulator for the McGill Student's Flying Club."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/rumi-ausaf-156963171/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Simulator", color: "blue" },
+                  { value: "Aviation", color: "red" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Arek Froundjian"
+            role="VP Pilot for A Day"
+            image={arekFround}
+            description="Arek was the VP Pilot For A Day for the McGill Student's Flying Club."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/rumi-ausaf-156963171/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Pilot for a Day", color: "blue" },
+                  { value: "Aviation", color: "orange" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Justin Matta"
+            role="VP Simulator"
+            image={justinM}
+            description="Justin was the VP Simulator for the McGill Student's Flying Club."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Simulator", color: "blue" },
+                  { value: "Aviation", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Amogh Kulkarni"
+            role="VP Sponsorships"
+            image={amoughKulkarni}
+            description="Amogh was in his third year studying Computer Engineering at McGill. He always wanted to be an astronaut, but life happened. When not working, he could usually be found creating new playlists or in the kitchen experimenting with flavours. He loved to spend hours talking about the universe."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/amogh-kulkarni-433710158/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Computer Engineering", color: "green" },
+                  { value: "Space", color: "purple" },
+                  { value: "Music Playlists", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Sebastien Mezeret"
+            role="President"
+            image={sebastianM}
+            description="Sebastien was the first president of MSFC. He studied Mechanical Engineering at McGill and later completed his flight training at the Oxford Aviation Academy. He became a pilot with the British airline, EasyJet."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Mechanical Engineering", color: "red" },
+                  { value: "Flight Training", color: "blue" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Kari Rosteck"
+            role="President"
+            image={kariR}
+            description="Kari was the second president of MSFC and prior to that served as VP Internal. She studied Mechanical Engineering at McGill. She expanded MSFC's community outreach and was also involved with flight sim. She worked for General Electric and Rolls-Royce."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Community Outreach", color: "green" },
+                  { value: "Flight Sim", color: "blue" },
+                  { value: "Rolls-Royce", color: "pink" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Salman Hashmi"
+            role="President"
+            image={salmanH}
+            description="Salman was the third president of MSFC. He studied Electrical Engineering at McGill. He became a researcher at McGill School of Computer Science. He launched Flight Sim and Pilot for a Day, opened Ground School to the public, and restructured the club around divisions in its current form."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Electrical Engineering", color: "yellow" },
+                  { value: "Flight Sim", color: "blue" },
+                  { value: "Ground School", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Lauren Nagel"
+            role="Past Executive"
+            image={laurenN}
+            description="Lauren completed her Masters degree in the Division of Experimental Medicine at McGill. She flew for two years, completing her RPP and recently her PPL in her 1976 Cessna 172. Lauren also worked for the Canadian Owners and Pilots Association working on marketing and outreach. In her free time, she loved to play soccer, cook, and make jokes."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/laurennagel2/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Experimental Medicine", color: "red" },
+                  { value: "Flying", color: "blue" },
+                  { value: "Soccer", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Madison Santos"
+            role="Co-President"
+            image={madisonS}
+            description="Madison was a third year student in the Department of Bioengineering. Flying since age 17, she held both a Private Pilot's License and a Glider Pilot's License. Madison was passionate for sharing aviation and aerospace with pilots and enthusiasts alike. In her downtime, she could be found playing in student orchestras, building rockets, and expanding her indoor garden."
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/madison-s-7a095614b/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Bioengineering", color: "purple" },
+                  { value: "Aviation", color: "blue" },
+                  { value: "Rocketry", color: "red" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Ali Najmaldin"
+            role="Co-President"
+            image={aliN}
+            description="Ali was a third-year student at McGill and studied Bioengineering. He was so passionate about aviation that he decided to go for his commercial pilot license. When he was not flying around Montreal, he was usually found behind a computer screen coding and solving geeky math problems. If that was not enough of a headache on its own, Ali was also a teaching assistant for the Department of Mathematics & Statistics so that he could be submerged in new diverse complex problems every day all while helping others; the unknown was what got him up in the morning. He also aspired to be a surgeon one day. As he used to say, 'life is either a daring adventure or nothing at all.'"
+            properties={{
+              "LinkedIn": {
+                type: "url",
+                value: "https://www.linkedin.com/in/alinajmaldin/"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Bioengineering", color: "purple" },
+                  { value: "Aviation", color: "blue" },
+                  { value: "Coding", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Guy Haddad"
+            role="VP External"
+            image={guyH}
+            description="Guy was the first VP External of MSFC and was also involved with Flight Sim. He studied Mechanical Engineering at McGill. He became a pilot with the Middle East Airlines."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "VP External", color: "purple" },
+                  { value: "Flight Sim", color: "orange" },
+                  { value: "Middle East Airlines", color: "gray" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Farzan Subhani"
+            role="VP Finance"
+            image={farzanS}
+            description="Farzan was the first VP Finance at MSFC. He studied Mechanical Engineering and Finance at McGill. He became an Associate at the Boston Consulting Group."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "VP Finance", color: "blue" },
+                  { value: "Finance", color: "yellow" },
+                  { value: "Consulting", color: "green" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Joseph Hayak"
+            role="VP Internal"
+            image={josephH}
+            description="Joe was the first VP Internal at MSFC. He studied mechanical engineering at McGill. He worked for SNC-Lavalin and Nesma and Partners."
+            properties={{
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "VP Internal", color: "pink" },
+                  { value: "Mechanical Engineering", color: "orange" },
+                  { value: "SNC-Lavalin", color: "brown" }
+                ]
+              }
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
