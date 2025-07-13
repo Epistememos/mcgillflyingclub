@@ -1,0 +1,96 @@
+---
+import alm_logo from "../../assets/images/alm-logo.png";
+import voltige_logo from "../../assets/images/voltige-logo.png";
+import red_canoe_logo from "../../assets/images/red-canoe-logo.png";
+import NotionCard from "../../components/NotionCard.astro";
+
+const partners = [
+    {
+        title: "ALM Par Avion",
+        image: alm_logo,
+        imageAlt: "ALM par avion logo",
+        imageBg: "",
+        properties: {
+            Type: {
+                type: "select",
+                value: "Training Partner",
+                color: "green",
+            },
+            Tier: {
+                type: "select",
+                value: "Gold",
+                color: "yellow",
+            },
+            Website: {
+                type: "url",
+                value: "https://almparavion.ca",
+            },
+        }
+    },
+    {
+        title: "Parachute Voltige",
+        image: voltige_logo,
+        imageAlt: "Parachute Voltige logo",
+        imageBg: "bg-white",
+        properties: {
+            Type: {
+                type: "select",
+                value: "Training Partner",
+                color: "green",
+            },
+            Tier: {
+                type: "select",
+                value: "Bronze",
+                color: "orange",
+            },
+            Website: {
+                type: "url",
+                value: "https://parachutevoltige.com",
+            },
+        }
+    },
+    {
+        title: "Red Canoe",
+        image: red_canoe_logo,
+        imageAlt: "Red Canoe logo",
+        imageBg: "",
+        properties: {
+            Type: {
+                type: "select",
+                value: "Gear Provider",
+                color: "purple",
+            },
+            Tier: {
+                type: "select",
+                value: "Silver",
+                color: "gray",
+            },
+            Website: {
+                type: "url",
+                value: "https://redcanoebrands.com/",
+            },
+        }
+    }
+];
+---
+
+<section class="py-16 px-8">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl text-center font-bold text-white mb-8">partners</h2>
+        <p class="text-2xl text-white mb-12 text-center">
+            Our partners are essential to our mission. They help us provide the best training and experiences for our students.
+        </p>
+        <div class="flex flex-wrap gap-6 justify-center">
+            {partners.map((partner) => (
+                <NotionCard
+                    title={partner.title}
+                    image={partner.image}
+                    imageAlt={partner.imageAlt}
+                    size="large"
+                    imageBg={partner.imageBg}
+                    properties={partner.properties}
+                />
+            ))}
+        </div>
+    </div>
+</section>
