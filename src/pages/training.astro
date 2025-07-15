@@ -6,6 +6,17 @@ import Footer from '../components/Footer.astro';
 import trainingBanner1 from '../assets/images/training-banner1.JPG';
 import trainingBanner2 from '../assets/images/training-banner2.JPG';
 import trainingBanner3 from '../assets/images/training-banner3.JPG';
+
+import groundschool from '../assets/images/groundschool.JPG';
+import groundschool1 from '../assets/images/groundschool1.JPG';
+import groundschool2 from '../assets/images/groundschool2.svg';
+import groundschool3 from '../assets/images/groundschool3.JPG';
+
+import flighttraining1 from '../assets/images/flighttraining1.JPG';
+import flighttraining2 from '../assets/images/flighttraining2.JPG';
+import flighttraining3 from '../assets/images/flighttraining3.JPG';
+
+import flowchart from '../assets/images/flowchart.png';
 ---
 
 <Layout>
@@ -23,102 +34,144 @@ import trainingBanner3 from '../assets/images/training-banner3.JPG';
     
     <div class="container mx-auto px-6 max-w-5xl">
       
-      <h1 class="text-5xl font-bold text-white mb-12 text-center">training</h1>
-      <h2 class="text-3xl font-bold text-white mb-12 text-left">pilot license</h2>
-      <div class="mb-12">
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-6">
-          There are plenty of resources online outlining the process of getting different licenses, so we take a slightly different approach. Below, we walk you through the licenses in a natural progression, outlining the privileges of each. To help you decide on your piloting pathway, we base our advice on a flow chart of yes/no questions. If you have more questions, email <a href="mailto:mcgillflyingclub@gmail.com?subject=[FT]" class="text-blue-400 underline">mcgillflyingclub@gmail.com</a> with the [FT] tag in your title. Ready to begin? Visit our <a href="#partner" class="text-blue-400 underline">Partner Flight School</a> section or their website for more details.
-        </p>
+      <p class="text-zinc-200 text-xl leading-relaxed text-center mb-8">
+        Whether you dream of piloting an aircraft or experiencing the thrill of skydiving, our club offers a clear pathway to take flight. Our programs combine structured ground school, hands-on flight training, and expert instruction in partnership with leading flight schools and skydiving centers. From your first lesson to advanced ratings, we guide you every step of the way. Explore the flowchart below to discover your ideal training journey!
+      </p>
+     
+      
+      <h2 class="text-5xl font-bold text-white mb-12 text-center">pilot license</h2>
+      <p class="text-zinc-200 text-lg leading-relaxed text-center mb-8">
+        In Canada, pilot licensing follows a structured progression with different levels to suit various aviation goals. The McGill Flying Club's flowchart explains this pathway, starting with the Private Pilot License (PPL) which allows you to fly solo or carry passengers. For those aiming for a professional flying career, the next step is the Commercial Pilot License (CPL). Pilots can then add advanced qualifications like the Instrument Rating (INRAT) for flying in poor visibility, the Multi-Engine Rating for operating complex aircraft, and the Instructor's Rating (AIRAF/AIRAT) to teach new pilots. Each license level requires both classroom learning and practical flight training. The flowchart provides a clear visual guide to help you understand and plan your aviation training journey from beginner to advanced levels.
+      </p>
+      <div class="flex justify-center mb-12">
+        <Image src={flowchart} alt="Pilot Training Pathway Flowchart" class="w-full max-w-2xl object-contain rounded-lg shadow-md" />
       </div>
+          <p class="text-zinc-200 text-lg leading-relaxed text-center mb-8">
+          To earn your Private Pilot License (PPL), you'll need to complete both theoretical and practical components. Transport Canada requires <strong>45 hours of ground school instruction</strong> covering aviation theory, regulations, and navigation, plus <strong>45 hours of flight training</strong> including dual instruction with a certified flight instructor and solo flight time. This comprehensive approach ensures you develop both the knowledge and skills needed to safely operate an aircraft.
+        </p>
 
-      <div class="mb-16">
-        <h2 class="text-3xl font-semibold text-white mb-4">Ground School (GS) Division</h2>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          The GS Division organizes and runs ground school courses, including Private Pilot's License (PPL) ground school since 2012, and now offers courses for other license types. In 2015, ground school was opened to the public. Today, we partner with Harv's Air to provide discounted training to all pilots.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">The Ground School</h3>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          Ground school is the theoretical/classroom component of your flight training. You must complete both ground school and practical flying to earn your license—much like a written and road test for a driver's license. Your first ground school will likely be for the PPL, including prep for the Student Pilot Permit, PSTAR, and PPAER. Once you complete the materials, you'll get a recommendation for the written exams. For exam site info, contact our FT Division.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">Ground School at McGill</h3>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          Our partnership with Harv's Air makes ground school affordable and flexible. Harv's Air's industry-leading virtual ground school prepares you for Transport Canada exams. Many of our execs have succeeded through this program. For more info, use the sidebar or CONTACT tab.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">Available Courses</h3>
-        <ul class="list-disc list-inside text-zinc-200 mb-4">
-          <li>Recreational Pilot Permit (RPP)</li>
-          <li>Private Pilot License (PPL)</li>
-          <li>Commercial Pilot License (CPL)</li>
-          <li>Instrument and Multi-engine Rating (INRAT)</li>
-          <li>Instructor's Rating (AIRAF/AIRAT)</li>
-          <li>Conversion courses (FAA &rarr; Transport Canada) on request</li>
-        </ul>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          Foreign license conversion courses are not available directly; contact us with [FT] in your email title for more info.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">Course Duration and Schedule</h3>
-        <ul class="list-disc list-inside text-zinc-200 mb-4">
-          <li>Self-paced, 270-day access across devices</li>
-          <li>Includes written exam prep and pre-lesson air exercise videos</li>
-          <li>Certificate and instructor letter of recommendation upon completion</li>
-          <li>Progress is saved; renew access at a lower price if needed</li>
-        </ul>
-        <h3 class="text-2xl font-semibold text-white mb-2">Cost</h3>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          Cost varies by license type. See Harv's Air's website for current prices.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">Ground School Contacts</h3>
-        <ul class="list-disc list-inside text-zinc-200 mb-4">
-          <li>Email us via the CONTACT tab with [GS] for ground school info</li>
-          <li>Email with [FT] for info on integrating ground school into your training</li>
-        </ul>
-        <div class="bg-zinc-800 rounded-lg p-4 mb-4">
-          <h4 class="text-xl font-semibold text-white mb-2">Ground School Partner</h4>
-          <a href="https://www.harvsair.com/" target="_blank" rel="noopener" class="text-blue-400 underline">Visit Harv's Air</a>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4 mb-4">
-          <h4 class="text-xl font-semibold text-white mb-2">Ground School Code Request</h4>
-          <p class="text-zinc-200">To receive a discount code, email us with [FT] at the start of your email title.</p>
-        </div>
-        <div class="bg-zinc-800 rounded-lg p-4 mb-4">
-          <h4 class="text-xl font-semibold text-white mb-2">Useful Links</h4>
-          <ul class="list-disc list-inside text-zinc-200">
-            <li><a href="https://www.tc.gc.ca/en/services/aviation/licensing-examinations.html" target="_blank" rel="noopener" class="text-blue-400 underline">Transport Canada Licensing & Exams</a></li>
-            <li><a href="https://www.tc.gc.ca/en/services/aviation/private-pilot-licence.html" target="_blank" rel="noopener" class="text-blue-400 underline">Private Pilot License Guide</a></li>
-            <li><a href="https://www.tc.gc.ca/en/services/aviation/instrument-rating.html" target="_blank" rel="noopener" class="text-blue-400 underline">Instrument Rating Guide</a></li>
-            <li><a href="https://www.tc.gc.ca/en/services/aviation/commercial-pilot-licence.html" target="_blank" rel="noopener" class="text-blue-400 underline">Commercial Pilot License Guide</a></li>
-            <li><a href="https://www.tc.gc.ca/en/services/aviation/instructor-rating.html" target="_blank" rel="noopener" class="text-blue-400 underline">Instructor's Rating Guide</a></li>
+      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4" open>
+        <summary class="text-3xl font-semibold text-white mb-2 cursor-pointer select-none">ground school</summary>
+        <div class="pt-2">
+          <h3 class="text-2xl font-semibold text-white mb-2 px-8">what is ground school?</h3>
+          <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
+            Ground school is the theoretical/classroom component of your flight training. You must complete both ground school and practical flying to earn your license; much like a written and road test for a driver's license. Your first ground school will likely be for the PPL, including prep for the Student Pilot Permit, PSTAR, and PPAER. Once you complete the materials and 5h of flight instruction time, you'll get a recommendation for the written exams. 
+          </p>
+          <div class="flex justify-center my-2">
+            <Image src={groundschool} alt="Top Gun Ground School" class="w-full max-w-2xl object-contain rounded-lg shadow-md" />
+          </div>
+          <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
+            Since 2012, we have been offering in-person ground school courses at McGill University, providing aspiring aviators with a structured and immersive introduction to aviation. Designed for multiple license types, our program is taught in partnership with a local Flight Training Unit (FTU), giving students direct access to experienced flight instructors in a collaborative classroom environment.
+            Held weekly for three hours in McGill classrooms, the course blends theory and practical insights at a heavily discounted student rate. Whether you're pursuing a career in aviation or simply passionate about flying, this is your opportunity to learn from industry professionals and take the first step toward the skies.
+            Courses are held weekly at McGill, with schedules and durations varying by session. To stay updated on upcoming offerings and secure your spot, follow us on Instagram for the latest details.
+            Space is limited due to the high demand.
+          </p>
+          <div class="flex flex-row justify-center my-4 h-64">
+            <Image src={groundschool1} alt="Graphical Forecast for Aviation Map" class="w-1/3 h-full object-cover shadow-md rounded-l-lg" />
+            <Image src={groundschool2} alt="CFS Aerodrome Chart" class="w-1/3 h-full object-cover bg-white shadow-md" />
+            <Image src={groundschool3} alt="CFS Aerodrome Chart" class="w-1/3 h-full object-cover bg-white shadow-md rounded-r-lg" />
+          </div>
+          <h3 class="text-2xl font-semibold text-white mb-2 px-8">online ground school</h3>
+          <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
+            We partnered with Harv's Air to also provide discounted online training to all pilots. Our partnership with Harv's Air makes ground school flexible. Harv's Air's industry-leading virtual ground school prepares you for Transport Canada exams. Many of our execs have succeeded through this program for their PPL and for other qualifications.
+          </p>
+          <ul class="list-disc list-inside text-zinc-200 mb-2">
+            <li>Self-paced, 270-day access across devices</li>
+            <li>Includes written exam prep and pre-lesson air exercise videos</li>
+            <li>Certificate and instructor letter of recommendation upon completion</li>
+            <li>Progress is saved and you can renew your access</li>
           </ul>
-          <p class="text-zinc-200 mt-2">Multi-Engine Rating does not require a written exam.</p>
+          <h3 class="text-2xl font-semibold text-white mb-2 px-8">available courses</h3>
+          <ul class="list-disc list-inside text-zinc-200 mb-2">
+            <li>Recreational Pilot Permit (RPP)</li>
+            <li>Private Pilot License (PPL)</li>
+            <li>Commercial Pilot License (CPL)</li>
+            <li>Instrument and Multi-engine Rating (INRAT)</li>
+            <li>Instructor's Rating (AIRAF/AIRAT)</li>
+            <li>Conversion courses (FAA &rarr; Transport Canada) on request</li>
+          </ul>
+          
+          <h3 class="text-2xl font-semibold text-white mb-2 px-8">cost</h3>
+          <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
+            We strive to keep costs as low as possible for our members. In-person ground school at McGill typically costs between $200 and $275, making it an affordable option for students. Please note that prices may vary depending on the course and year.
+          </p>
         </div>
-      </div>
+      </details>
 
-      <div id="partner" class="mb-16">
-        <h2 class="text-3xl font-semibold text-white mb-4">Partner Flight School (FTU Division)</h2>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          We are proud partners with <strong>ALM Par Avion</strong> based at Montreal/Beloeil (CSB3). Our partnership makes starting or continuing flight training easier and ensures up-to-date, accurate information. In case of conflicting info, ALM Par Avion's website takes precedence.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">School and Airport Overview</h3>
-        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-4">
-          ALM Par Avion is a local Montreal flight training unit at Beloeil Airport. The school has a club-like atmosphere, with instructors teaching every license and rating issued by Transport Canada. They also offer aerial work and aircraft charters.
-        </p>
-        <h3 class="text-2xl font-semibold text-white mb-2">Instruction Offered</h3>
-        <ul class="list-disc list-inside text-zinc-200 mb-4">
-          <li>Private Pilot's License</li>
-          <li>Commercial Pilot's License</li>
-          <li>Night Rating</li>
-          <li>Instrument Rating (Class 1 or 3)</li>
-          <li>Instructor's Rating (French only)</li>
-          <li>Multi-Engine Rating</li>
-        </ul>
-        <a href="https://almparavion.com/" target="_blank" rel="noopener" class="text-blue-400 underline">Visit ALM Par Avion</a>
-      </div>
+      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4" open>
+        <summary class="text-3xl font-semibold text-white mb-2 cursor-pointer select-none">flight training</summary>
+        <div class="pt-2">
+          
+          <div class="mb-12">
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">what is flight training?</h3>
+            <p class="list-disc list-inside text-zinc-200 mb-2 text-justify">
+              Flight training is the hands-on, practical component of becoming a pilot. While ground school teaches you the theory, flight training puts you in the cockpit where you learn to actually fly an aircraft. This includes learning aircraft controls, takeoffs and landings, navigation, emergency procedures, and developing the skills and confidence needed to safely operate an aircraft. Flight training is conducted with certified flight instructors in real aircraft, providing you with the practical experience required to earn your pilot license.
+            </p>
+            
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">practical training</h3>
+            <p class="list-disc list-inside text-zinc-200 mb-2 text-justify">
+              Canadian Law dictates a <strong>minimum of 45 hours of flight training</strong>. On average, students require <strong>30 hours of dual flight</strong>, and <strong>15 hours of solo flight</strong>. You will have to carry out a <strong>cross country flight with your instructor</strong>, as well as <strong>5 hours of instrument training</strong>. Part of your solo training will include <strong>5 hours of cross-country flight</strong>, flying in a triangle of at least <strong>150 nautical miles</strong>, plus <strong>2 full-stop landings</strong>.
+            </p>
+            
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">obtaining your licence</h3>
+            <p class="list-disc list-inside text-zinc-200 mb-2 text-justify">
+              You must pass the <strong>Transport Canada Theory exam</strong> with a grade of at least <strong>60%</strong>. Also note that the theory exam is broken into 4 categories, and you must obtain at least <strong>60% in each one</strong> in order to pass. For example, you can't get 0 in one section, perfect in all the others, and claim victory, given a 75% average. The four sections of the exam will cover <strong>General Knowledge, Air Law, Navigation, and Weather</strong>. Then, you need to pass a <strong>practical exam with a Transport Canada representative</strong>, by getting a mark of at least <strong>60%</strong>.
+            </p>
+            
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">privileges</h3>
+            <p class="list-disc list-inside text-zinc-200 mb-2 text-justify">
+              This licence permits you to be the <strong>Pilot In Command (PIC)</strong> of any <strong>single engine aircraft</strong> while in <strong>VFR day conditions</strong>. You may <strong>carry passengers, share expenses, fly abroad</strong>, and possibly go get a high performance aircraft rating.
+            </p>
+            <p class="list-disc list-inside text-zinc-200 mb-2 text-justify">
+              The <strong>Private Pilot License</strong> allows its holder to fly as pilot or co-pilot of an airplane for personal purposes. This is the <strong>most commonly held license in Canada</strong> and is the first one earned by the aspiring professional pilot.
+            </p>
+            <p class="list-disc list-inside text-zinc-200 mb-8">
+              Only <strong>day flying</strong> of a <strong>single engine non-high-performance airplane</strong> in accordance with <strong>Visual Flying Rules (VFR)</strong> is allowed with the PPL, unless other ratings have been earned. Although a pilot with this license <strong>cannot work for hire</strong>, reimbursement for some costs is permitted.
+            </p>
+            <div class="flex flex-row justify-center my-4 h-64">
+              <Image src={flighttraining1} alt="Graphical Forecast for Aviation Map" class="w-1/3 h-full object-cover shadow-md rounded-l-lg" />
+              <Image src={flighttraining2} alt="CFS Aerodrome Chart" class="w-1/3 h-full object-cover bg-white shadow-md" />
+              <Image src={flighttraining3} alt="CFS Aerodrome Chart" class="w-1/3 h-full object-cover bg-white shadow-md rounded-r-lg" />
+            </div>
 
-      <div class="bg-zinc-900 rounded-lg p-6 mt-12">
-        <h3 class="text-2xl font-semibold text-white mb-2">Contact</h3>
-        <p class="text-zinc-200 mb-2">Email: <a href="mailto:mcgillflyingclub@gmail.com" class="text-blue-400 underline">mcgillflyingclub@gmail.com</a></p>
-        <p class="text-zinc-200">(Use [GS] or [FT] tag in your email title)</p>
-      </div>
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">prerequisites</h3>
+            <ul class="list-disc list-inside text-zinc-200 mb-2">
+              <li>16 years of age to solo</li>
+              <li>17 years to obtain the Private Pilot License</li>
+              <li>Successful completion of category 3 or 1 Medical Exam</li>
+              <li>Successful completion of the PSTAR and Radio exam</li>
+            </ul>
+            
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">transport canada requirements</h3>
+            <ul class="list-disc list-inside text-zinc-200 mb-2">
+              <li>45 hours total flying time</li>
+              <li>17 hours dual (with instructor), including 3 hours-cross country and 5 hours instrument flying</li>
+              <li>12 hours of solo, including 5 hours cross country</li>
+              <li>A 150 nautical miles cross country trip with 2 landings at 2 different airports</li>
+              <li>40 hours of ground school</li>
+              <li>Completion of a Transport Canada PPL written exam</li>
+              <li>Completion of a Transport Canada PPL practical flight test</li>
+            </ul>
+            
+            <h3 class="text-2xl font-semibold text-white mb-2 px-8">additional endorsements (ratings)</h3>
+            <ul class="list-disc list-inside text-zinc-200 mb-2 ">
+              <li>Seaplane rating</li>
+              <li>Multi-engine rating</li>
+              <li>Night rating</li>
+              <li>VFR-Over-the-Top rating</li>
+              <li>Group 1 Instrument rating (Multi-engine)</li>
+              <li>Group 3 Instrument rating (Single engine)</li>
+            </ul>
+            
+            
+          </div>
+        </div>
+      </details>
+
+      
+
+      
+      
     </div>
   </section>
   <Footer />

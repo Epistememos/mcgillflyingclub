@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navigation />
+  <section class="bg-zinc-950 pb-20 px-8 py-20 min-h-screen">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div id="partner" class="mb-16">
+        <h2 class="text-3xl font-semibold text-white mb-2">Partner Flight School (FTU Division)</h2>
+        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
+          We are proud partners with <strong>ALM Par Avion</strong> based at Montreal/Beloeil (CSB3). Our partnership makes starting or continuing flight training easier and ensures up-to-date, accurate information. In case of conflicting info, ALM Par Avion's website takes precedence. We offer discounted rates for our members, making flight training more accessible and affordable.
+        </p>
+        <h3 class="text-2xl font-semibold text-white mb-2">School and Airport Overview</h3>
+        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
+          ALM Par Avion is a local Montreal flight training unit at Beloeil Airport. The school has a club-like atmosphere, offering many ratings issued by Transport Canada.
+        </p>
+        <h3 class="text-2xl font-semibold text-white mb-2">Instruction Offered</h3>
+        <ul class="list-disc list-inside text-zinc-200 mb-2">
+          <li>Private Pilot's License</li>
+          <li>Commercial Pilot's License</li>
+          <li>Night Rating</li>
+          <li>VFR OTT</li>
+          <li>Instrument Rating (Class 1 or 3)</li>
+        </ul>
+        <a href="https://almparavion.com/" target="_blank" rel="noopener" class="text-blue-400 underline">Visit ALM Par Avion</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
