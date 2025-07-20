@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets"
+import skydive from "../../assets/skydive.mp4";
+import training1 from "../../assets/images/training1.jpg";
+import training2 from "../../assets/images/training2.jpg";
+---
+
+<section class="py-16 px-8">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-5xl text-center font-bold text-white mb-12">training</h2>
+        
+        <p class="text-2xl text-white mb-12">
+            Our <strong>PPL program</strong> includes structured ground school and practical flight training in partnership with certified flight schools.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-8 mb-12">
+            <div class="flex-1">
+                <div class="relative mb-4">
+                    <Image
+                        src={training1}
+                        alt="ground school training"
+                        class="w-full aspect-square object-cover rounded-lg"
+                    />
+                    <div class="absolute bottom-4 left-4 flex gap-2">
+                        <button class="bg-white text-black px-3 py-1 rounded text-sm font-semibold">learn more</button>
+                        <button class="bg-black text-white px-3 py-1 rounded text-sm font-semibold">sign up</button>
+                    </div>
+                </div>
+                <h3 class="text-white">
+                    <span class="text-3xl font-bold">ground school</span>
+                    <span class="text-xl"> – the theory</span>
+                </h3>
+            </div>
+            
+            <div class="flex-1">
+                <div class="relative mb-4">
+                    <Image
+                        src={training2}
+                        alt="flight training"
+                        class="w-full aspect-square object-cover rounded-lg"
+                    />
+                    <div class="absolute bottom-4 left-4 flex gap-2">
+                        <button class="bg-white text-black px-3 py-1 rounded text-sm font-semibold">learn more</button>
+                        <button class="bg-black text-white px-3 py-1 rounded text-sm font-semibold">sign up</button>
+                    </div>
+                </div>
+                <h3 class="text-white">
+                    <span class="text-3xl font-bold">flight training</span>
+                    <span class="text-xl"> – the practice</span>
+                </h3>
+            </div>
+        </div>
+        <p class="text-2xl text-white mb-8">
+            Our <strong>Skydiving License Program</strong> includes structured ground school and practical jump training with certified instructors.
+        </p>
+        <div class="relative">
+            <video
+                src={skydive}
+                class="w-full aspect-2/1 object-cover rounded-lg"
+                autoplay
+                loop
+                muted
+                playsinline
+            >
+                Sorry, your browser does not support embedded videos.
+            </video>
+            <div class="absolute bottom-4 right-4 flex gap-2">
+                <button class="bg-white text-black px-4 py-2 rounded font-semibold">learn more</button>
+                <button class="bg-black text-white px-4 py-2 rounded font-semibold">sign up</button>
+            </div>
+        </div>
+    </div>
+</section>

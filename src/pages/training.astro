@@ -30,15 +30,15 @@ import flowchart from '../assets/images/flowchart.png';
         <Image src={trainingBanner3} alt="Aircraft on the ramp" class="w-full aspect-3/1 object-cover shadow-md" />
       </div>
     </div>
-  <section class="bg-zinc-950 pb-20 px-8 py-20 min-h-screen">
+  <section class="bg-zinc-950  px-8 py-20 min-h-screen">
     
-    <div class="container mx-auto px-6 max-w-5xl">
+    <div class="container mx-auto px-6 ">
       
       <p class="text-zinc-200 text-xl leading-relaxed text-center mb-8">
         Whether you dream of piloting an aircraft or experiencing the thrill of skydiving, our club offers a clear pathway to take flight. Our programs combine structured ground school, hands-on flight training, and expert instruction in partnership with leading flight schools and skydiving centers. From your first lesson to advanced ratings, we guide you every step of the way. Explore the flowchart below to discover your ideal training journey!
       </p>
      
-      
+      <section class="pb-12">
       <h2 class="text-5xl font-bold text-white mb-12 text-center">pilot license</h2>
       <p class="text-zinc-200 text-lg leading-relaxed text-center mb-8">
         In Canada, pilot licensing follows a structured progression with different levels to suit various aviation goals. The McGill Flying Club's flowchart explains this pathway, starting with the Private Pilot License (PPL) which allows you to fly solo or carry passengers. For those aiming for a professional flying career, the next step is the Commercial Pilot License (CPL). Pilots can then add advanced qualifications like the Instrument Rating (INRAT) for flying in poor visibility, the Multi-Engine Rating for operating complex aircraft, and the Instructor's Rating (AIRAF/AIRAT) to teach new pilots. Each license level requires both classroom learning and practical flight training. The flowchart provides a clear visual guide to help you understand and plan your aviation training journey from beginner to advanced levels.
@@ -50,7 +50,7 @@ import flowchart from '../assets/images/flowchart.png';
           To earn your Private Pilot License (PPL), you'll need to complete both theoretical and practical components. Transport Canada requires <strong>45 hours of ground school instruction</strong> covering aviation theory, regulations, and navigation, plus <strong>45 hours of flight training</strong> including dual instruction with a certified flight instructor and solo flight time. This comprehensive approach ensures you develop both the knowledge and skills needed to safely operate an aircraft.
         </p>
 
-      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4" open>
+      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4">
         <summary class="text-3xl font-semibold text-white mb-2 cursor-pointer select-none">ground school</summary>
         <div class="pt-2">
           <h3 class="text-2xl font-semibold text-white mb-2 px-8">what is ground school?</h3>
@@ -98,7 +98,7 @@ import flowchart from '../assets/images/flowchart.png';
         </div>
       </details>
 
-      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4" open>
+      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4" >
         <summary class="text-3xl font-semibold text-white mb-2 cursor-pointer select-none">flight training</summary>
         <div class="pt-2">
           
@@ -162,15 +162,70 @@ import flowchart from '../assets/images/flowchart.png';
               <li>Group 1 Instrument rating (Multi-engine)</li>
               <li>Group 3 Instrument rating (Single engine)</li>
             </ul>
-            
-            
           </div>
         </div>
       </details>
+      <div class="w-full max-w-3xl mx-auto aspect-video mb-12">
+        <iframe
+          src="https://www.youtube.com/embed/SgUHSDW1Q6Y"
+          title="Skydiving License Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          class="w-full h-full rounded-lg shadow-md"
+        ></iframe>
+        <p class="text-sm  text-white mb-2 font-inter ">Check out Pedro's channel, he has lots of valuable tips and tricks for flight school!</p>
+      </div>
+    </section>
 
-      
 
-      
+    <section>
+      <h2 class="text-5xl font-bold text-white mb-12 text-center">skydiving license</h2>
+      <div class=" mx-auto text-zinc-200 text-lg leading-relaxed mb-8">
+        <p>
+          Our skydiving training is offered in partnership with Voltige, a leading parachuting school in Quebec. The main pathway to becoming a licensed skydiver is the <strong>PAC (Progression Assistée en Chute Libre)</strong> program, which is designed to take you from your first jump to solo freefall.
+        </p>
+        <h3 class="text-2xl font-semibold text-white mt-8 mb-2">prerequisites</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li>Have already completed a tandem skydive</li>
+          <li>Be in good physical condition</li>
+          <li>Successfully complete a pre-exam of physical and intellectual skills</li>
+          <li>Be available for the full training schedule</li>
+        </ul>
+        <p class="mb-4">
+          <strong>Pre-exam:</strong> Before starting, you must pass a short test covering both physical and intellectual skills needed for skydiving. After registration and your first payment, you’ll receive a detailed study manual to help you prepare.
+        </p>
+        <h3 class="text-2xl font-semibold text-white mt-8 mb-2">program structure</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li>5 hours of comprehensive ground school theory</li>
+          <li>15 minutes of indoor wind tunnel training</li>
+          <li>9 freefall jumps, progressing from instructor-assisted to fully solo</li>
+          <li>Levels 1-2: 2 instructors</li>
+          <li>Levels 3-5: 1 instructor</li>
+          <li>Levels 6-7: Solo jumps, supervised in the plane</li>
+          <li>Level 8: Solo jump with emergency exit simulation at 5000 ft</li>
+          <li>Level 9: Solo jump filmed by an instructor (final exam)</li>
+        </ul>
+        <p class="mb-4">
+          The program normally costs around <strong>2600$</strong> and includes your first pair of jump goggles, the course manual, and a logbook. Training sessions are offered on select dates throughout the season.
+        </p>
+        <h3 class="text-2xl font-semibold text-white mt-8 mb-2">privileges</h3>
+        <ul class="list-disc list-inside mb-4">
+          <li>Jump solo anywhere in Canada</li>
+          <li>Receive your "Brevet Solo" (basic solo certificate), allowing you to jump independently at Canadian dropzones</li>
+        </ul>
+        <p class="mb-4">
+          For more information, visit Voltige’s website or contact their customer service. The PAC program is the best way to become an independent skydiver and join the global skydiving community!
+        </p>
+        <h3 class="text-2xl font-semibold text-white mt-8 mb-2">progression beyond the basic solo certificate</h3>
+        <p class="mb-4">
+          After earning your initial solo certificate (Brevet Solo), you can continue to advance through higher license levels as you gain experience and skills. The <strong>Brevet A (A License)</strong> is the first full international skydiving license, allowing you to jump with others and at dropzones worldwide. The <strong>B license</strong> (minimum 50 jumps) demonstrates further proficiency, including group jumps and canopy piloting. The <strong>C license</strong> (minimum 200 jumps) allows for instructor training and more advanced maneuvers. The highest, the <strong>D license</strong> (minimum 500 jumps), is reserved for highly experienced skydivers and grants all instructional privileges and the ability to participate in the most advanced skydiving activities. Each level opens up new opportunities and challenges, encouraging lifelong learning and progression in the sport.
+        </p>
+      </div>
+      <div class="w-full max-w-3xl mx-auto aspect-video mb-12">
+        <iframe width="1703" height="966" src="https://www.youtube.com/embed/vU2JVHqq9p4" title="SKYDIVING LICENSES - Overview to become a skydiver (2023)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full rounded-lg shadow-md"> </iframe>
+        <p class="text-sm  text-white mb-2 font-inter ">Check out Catherine's channel, she has lots of valuable tips and tricks for skydiving!</p>
+      </div>
+    </section>
       
     </div>
   </section>

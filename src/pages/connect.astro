@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import bannerConnect from '../assets/images/banner-connect.JPG';
+import { Image } from 'astro:assets';
+---
+
+<Layout>
+  <Navigation />
+
+  <div class="w-full">
+    <Image src={bannerConnect} alt="Connect Banner" class="w-full aspect-3/1 object-cover shadow-md" />
+  </div>
+
+  <section class="bg-zinc-950 min-h-screen py-16 px-4">
+    <div class=" mx-auto">
+      <p class="text-zinc-200 text-xl text-center mb-12">
+        We regroup a vibrant community of students and aviation enthusiasts from all around Montreal. Whether you're interested in flying, skydiving, or just meeting like-minded people, the McGill Flying Club is your gateway to the skies!
+      </p>
+
+      <div class="rounded-lg shadow-md p-8 mb-16">
+        <h2 class="text-3xl font-bold text-white mb-6 text-center">become a member</h2>
+        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-6">
+          As a member of the McGill Flying Club, you join a passionate community of students and aviation enthusiasts. Membership gives you access to exclusive events, discounted flight and skydiving training, ground school courses, social gatherings, and a network of experienced pilots and skydivers. Members can participate in club trips, workshops, and receive special partner discounts.
+        </p>
+        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-6">
+          <strong>Requirements:</strong> Membership is open to all students and young adults in Montreal and the surrounding area. No prior flying or skydiving experience is required—just a genuine interest in aviation, a willingness to learn, and a collaborative spirit. All you need is enthusiasm and a desire to be part of our growing community!
+        </p>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeZ1J82Ns6Nq4pu3wEXs5GAJMum3DBGAaF4R09ZbdQ7TgFiMg/viewform?usp=dialog" method="GET" target="_blank" class="flex flex-col gap-4 items-center w-full  ">
+          <input type="text" name="name" placeholder="Full Name (First Name, Last Name)" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400  min-w-120" />
+          <input type="email" name="email" placeholder="Student Email Address" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400  min-w-120" />
+          <select name="university" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400 min-w-120">
+            <option value="">Select your university</option>
+            <option value="McGill University">McGill University</option>
+            <option value="Université de Montréal">Université de Montréal</option>
+            <option value="Concordia University">Concordia University</option>
+            <option value="Université du Québec à Montréal (UQAM)">Université du Québec à Montréal (UQAM)</option>
+            <option value="École de technologie supérieure (ÉTS)">École de technologie supérieure (ÉTS)</option>
+            <option value="Polytechnique Montréal">Polytechnique Montréal</option>
+            <option value="Other">Other</option>
+          </select>
+          <select name="eus_member" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400 min-w-120">
+            <option value="">Are you a member of the EUS?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <input type="text" name="student_id" placeholder="Student ID (if EUS member)" class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400 min-w-120" />
+          <button type="submit" class="bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-6 rounded transition-colors">join now</button>
+        </form>
+      </div>
+
+      <div class="bg-zinc-900 rounded-lg shadow-md p-8">
+        <h2 class="text-3xl font-bold text-white mb-6 text-center">contact us</h2>
+        <form action="mailto:mcgillflyingclub@gmail.com" method="POST" enctype="text/plain" class="flex flex-col gap-4">
+          <input type="text" name="name" placeholder="Your Name" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+          <input type="email" name="email" placeholder="Your Email" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+          <input type="text" name="subject" placeholder="Subject" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400" />
+          <select name="category" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400">
+            <option value="">Select a category</option>
+            <option value="ground school">Ground School</option>
+            <option value="flight training">Flight Training</option>
+            <option value="skydiving">Skydiving</option>
+            <option value="skydiving training">Skydiving Training</option>
+            <option value="events">Events</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea name="message" placeholder="Your Message" rows="5" required class="px-4 py-2 rounded bg-zinc-800 text-white focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+          <button type="submit" class="bg-red-500 hover:bg-red-400 text-white font-semibold py-2 px-6 rounded transition-colors">Send Email</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -4,11 +4,11 @@ import { Image } from 'astro:assets';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import ExecutiveCard from '../components/ExecutiveCard.astro';
-import youdas from '../assets/images/execs/youdasY.JPG';
-import estelleH from '../assets/images/execs/estelleH.JPG';
-import luc from '../assets/images/execs/lucF.JPG';
-import margot from '../assets/images/execs/margotV.JPG';
-import jocelyn from '../assets/images/execs/jocelynE.JPG';
+import youdas from '../assets/images/execs/youdasY.jpg';
+import estelleH from '../assets/images/execs/estelleH.jpg';
+import luc from '../assets/images/execs/lucF.jpg';
+import margot from '../assets/images/execs/margotV.jpg';
+import jocelyn from '../assets/images/execs/jocelynE.jpg';
 import lutmingW from '../assets/images/execs/lutmingW.png';
 import meiriT from '../assets/images/execs/meiriT.jpg';
 import brigitC from '../assets/images/execs/brigitC.jpg';
@@ -30,7 +30,7 @@ import amoughKulkarni from '../assets/images/execs/amoughKulkarni.jpg';
 import celinaW from '../assets/images/execs/celinaW.jpg';
 import nirvairC from '../assets/images/execs/nirvairC.jpg';
 import theoV from '../assets/images/execs/theoV.jpg';
-import laurenN from '../assets/images/execs/laurenN.JPG';
+import laurenN from '../assets/images/execs/laurenN.jpg';
 import aliN from '../assets/images/execs/aliN.jpg';
 import sebastianM from '../assets/images/execs/sebastianM.jpg';
 import kariR from '../assets/images/execs/kariR.jpg';
@@ -50,7 +50,7 @@ import grishB from '../assets/images/execs/grishB.jpg';
 import about1 from '../assets/images/about1.jpg';
 import about2 from '../assets/images/about2.jpg';
 import about3 from '../assets/images/about3.jpg';
-import valentineH from '../assets/images/execs/valentineH.JPG';
+import valentineH from '../assets/images/execs/valentineH.jpg';
 import annaL from '../assets/images/execs/annaL.jpg';
 
 ---
@@ -58,7 +58,7 @@ import annaL from '../assets/images/execs/annaL.jpg';
 <Layout>
   <Navigation />
   <section class="bg-zinc-950 min-h-screen">
-    <div class="flex flex-row justify-center w-full aspect-3/1">
+    <div class="flex flex-row justify-center w-full aspect-3/1 mb-20">
       <Image src={about1} alt="Historic club event" class="w-1/3 h-full object-cover  shadow-md" />
       <Image src={about2} alt="Flight training session" class=" w-1/3 h-full object-cover shadow-md" />
       <Image src={about3} alt="Club members at airport" class="w-1/3 h-full object-cover shadow-md" />
@@ -87,7 +87,7 @@ import annaL from '../assets/images/execs/annaL.jpg';
             image={youdas}
             years="2025-2026" 
             bio="BEng. Software Engineering, 2027"
-            description="Youdas started his journey in the Royal Canadian Air Cadet Program where he obtained his Private Pilot License. He is working towards his night rating. He likes coding projects, boxing, riding his motorcycle and pulling crazy stunts like running an ultramarathon at 4AM."
+            description="Youdas started his journey in the Royal Canadian Air Cadet Program where he obtained his Private Pilot License. He is working towards his night rating. He likes boxing, motorcycles and pulling crazy stunts like running an ultramarathon at 4AM."
             properties={{
               "Certifications": {
                 type: "multi-select",
@@ -112,7 +112,8 @@ import annaL from '../assets/images/execs/annaL.jpg';
                 value: [
                   { value: "Aerobatics", color: "blue" },
                   { value: "Boxing", color: "red" },
-                  { value: "Motorcycles", color: "yellow" }
+                  { value: "Motorcycles", color: "yellow" },
+                  { value: "Entrepreneurship", color: "green" }
                 ]
               }
             }}
@@ -123,7 +124,7 @@ import annaL from '../assets/images/execs/annaL.jpg';
             years="2025-2026"
             image= {estelleH}
             bio="BEng. Mechanical Engineering, 2026"
-            description="Estelle's aviation journey started with fear, but curiosity quickly took over. She earned her Private Pilot License before starting university and has been flying ever since.When she’s not in the air or deep in engineering projects, Estelle works as an event photographer, always bringing her camera along on the club’s latest adventures."
+            description="Estelle's aviation journey started with fear, but curiosity quickly took over. She earned her Private Pilot License before starting university and has been flying ever since. When she’s not in the air or deep in engineering projects, Estelle works as an event photographer, always bringing her camera along on the club’s latest adventures."
             properties={{
               "Certifications": {
                 type: "multi-select",
@@ -229,7 +230,8 @@ import annaL from '../assets/images/execs/annaL.jpg';
                 type: "multi-select",
                 value: [
                   { value: "PPL", color: "blue" },
-                  { value: "Glider", color: "gray" }
+                  { value: "Night Rating", color: "purple" },
+                  { value: "Glider", color: "yellow" }
                 ]
               },
               "Interests": {
@@ -248,14 +250,14 @@ import annaL from '../assets/images/execs/annaL.jpg';
             years="2025-2026"
             bio="BEng. Mechanical Engineering, 2027"
             image={brigitC}
-            description="Brigit'spassion for aviation began watching the Snowbirds flybys of Parliament Hill every year on Canada Day. She then participated in the Royal Canadian Air Cadets program and is now a pilot-in-training for the Royal Canadian Air Force. In her free time, you'll find her at airshows, climbing, and hiking."
+            description="Brigit's passion for aviation began watching the Snowbirds flybys of Parliament Hill every year on Canada Day. She then participated in the Royal Canadian Air Cadets program and is now a pilot-in-training for the Royal Canadian Air Force. In her free time, you'll find her at airshows, climbing, and hiking."
             properties={{
               "Interests": {
                 type: "multi-select",
                 value: [
-                  { value: "Canadian Armed Forces", color: "orange" },
-                  { value: "Aviation", color: "gray" },
-                  { value: "Astronauts", color: "green" }
+                  { value: "Airshows", color: "orange" },
+                  { value: "Hiking", color: "green" },
+                  { value: "Astronauts", color: "purple" }
                 ]
               },
               "Certifications": {
