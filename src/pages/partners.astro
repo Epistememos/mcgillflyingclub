@@ -1,162 +1,367 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import partnersAlm1 from '../assets/images/partners-alm1.jpg';
-import partnersAlm2 from '../assets/images/partners-alm2.jpg';
-import partnersFlightTraining1 from '../assets/images/partners-flighttraining1.JPG';
-import partnersFlightTraining2 from '../assets/images/partners-flighttraining2.JPG';
-import partnersSkydiving1 from '../assets/images/partners-skydiving1.JPG';
-import partnersSkydiving2 from '../assets/images/partners-skydiving2.JPG';
-import almLogo from '../assets/images/alm-logo.png';
-import voltigeLogo from '../assets/images/voltige-logo.png';
-import partnersVoltige1 from '../assets/images/partners-voltige1.jpg';
-import partnersVoltige2 from '../assets/images/partners-voltige2.jpg';
-import eusLogo from '../assets/images/eus-logo.png';
-import redCanoeLogo from '../assets/images/red-canoe-logo.png';
-import redBullLogo from '../assets/images/red-bull-logo.png';
-import partnerBanner from '../assets/images/partners-banner.jpg';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import partnersAlm1 from "../assets/images/partners-alm1.jpg";
+import partnersAlm2 from "../assets/images/partners-alm2.jpg";
+import partnersFlightTraining1 from "../assets/images/partners-flighttraining1.JPG";
+import partnersFlightTraining2 from "../assets/images/partners-flighttraining2.JPG";
+import partnersSkydiving1 from "../assets/images/partners-skydiving1.JPG";
+import partnersSkydiving2 from "../assets/images/partners-skydiving2.JPG";
+import almLogo from "../assets/images/alm-logo.png";
+import voltigeLogo from "../assets/images/voltige-logo.png";
+import partnersVoltige1 from "../assets/images/partners-voltige1.jpg";
+import partnersVoltige2 from "../assets/images/partners-voltige2.jpg";
+import eusLogo from "../assets/images/eus-logo.png";
+import redCanoeLogo from "../assets/images/red-canoe-logo.png";
+import redBullLogo from "../assets/images/red-bull-logo.png";
+import partnerBanner from "../assets/images/partners-banner.jpg";
 ---
 
 <style>
-details summary {
-  list-style: none;
-}
-details summary::-webkit-details-marker {
-  display: none;
-}
-details[open] .custom-arrow {
-  transform: rotate(90deg);
-}
+  details summary {
+    list-style: none;
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .custom-arrow {
+    transform: rotate(90deg);
+  }
 </style>
 
 <Layout>
   <Navigation />
-  <div class="grid  w-full ">
+  <div class="grid w-full">
     <div>
-      <Image src={partnerBanner} alt="Partners banner" class="w-full aspect-3/1 object-cover shadow-md" />
+      <Image
+        src={partnerBanner}
+        alt="Partners banner"
+        class="w-full aspect-3/1 object-cover shadow-md"
+      />
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <div class="bg-zinc-950 pb-20 px-4 py-10 min-h-screen">
-    <div class="container mx-auto px-6 ">
+  <script
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    defer></script>
+  <div class="bg-zinc-950 pb-20 px-4 py-10">
+    <div class="container mx-auto px-6">
       <p class="text-zinc-200 text-lg leading-relaxed text-center mb-8">
-        We extend our sincere gratitude to our partners for their invaluable support. Their contributions enable the McGill Flying Club to expand its reach, pursue its vision, and further its mission. Through their collaboration, we are able to enhance opportunities for our members and advance the club’s goals in aviation education and training. We deeply appreciate their commitment to helping us grow and succeed.
+        We extend our sincere gratitude to our partners for their invaluable
+        support. Their contributions enable the McGill Flying Club to expand its
+        reach, pursue its vision, and further its mission. Through their
+        collaboration, we are able to enhance opportunities for our members and
+        advance the club’s goals in aviation education and training. We deeply
+        appreciate their commitment to helping us grow and succeed.
       </p>
-      <div x-data="{ open: null }" class="flex flex-row gap-8 transition-all duration-500">
+      <div
+        x-data="{ open: null }"
+        class="flex flex-row gap-8 transition-all duration-500"
+      >
         <!-- financial partners -->
-        <div :class="open === 'financial' ? 'flex-[3] z-10 bg-zinc-950' : (open ? 'hidden' : 'flex-1')" class="flex-1 p-2 shadow-md mb-4 transition-all duration-500 flex flex-col justify-between">
-          <h1 class="text-4xl font-semibold text-white align-middle text-center p-4">financial partner</h1>
+        <div
+          :class="open === 'financial' ? 'flex-[3] z-10 bg-zinc-950' : (open ? 'hidden' : 'flex-1')"
+          class="flex-1 p-2 shadow-md mb-4 transition-all duration-500 flex flex-col justify-between"
+        >
+          <h1
+            class="text-4xl font-semibold text-white align-middle text-center p-4"
+          >
+            financial partner
+          </h1>
           <div class="flex flex-col flex-1 justify-end">
             <div class="flex flex-row gap-x-3 justify-center mb-6">
-              <Image src={eusLogo} alt="EUS logo" class="w-50 aspect-square object-contain p-2 border border-4 border-yellow-400 shadow-md rounded-full" />
+              <Image
+                src={eusLogo}
+                alt="EUS logo"
+                class="w-50 aspect-square object-contain p-2 border border-4 border-yellow-400 shadow-md rounded-full"
+              />
             </div>
-            <details :open="open === 'financial'" class="mb-2 bg-zinc-950 rounded-lg shadow p-2">
-              <summary @click.prevent="open = open === 'financial' ? null : 'financial'" class="flex items-center gap-2 text-2xl font-semibold text-white align-middle p-2 select-none cursor-pointer">
+            <details
+              :open="open === 'financial'"
+              class="mb-2 bg-zinc-950 rounded-lg shadow p-2"
+            >
+              <summary
+                @click.prevent="open = open === 'financial' ? null : 'financial'"
+                class="flex items-center gap-2 text-2xl font-semibold text-white align-middle p-2 select-none cursor-pointer"
+              >
                 <span class="custom-arrow transition-transform duration-200">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                    <path d="M9 6l6 6-6 6"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 6l6 6-6 6"></path>
                   </svg>
                 </span>
                 our financial partner
               </summary>
               <template x-if="open === 'financial'">
                 <div class="my-8">
-                  <h2 class="text-4xl font-semibold text-white mb-6">Engineering Undergraduate Society (EUS)</h2>
-                  <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                    The McGill Engineering Undergraduate Society (EUS) is a key financial partner of the McGill Flying Club. Their support helps us offer affordable training, events, and opportunities to our members. We are grateful for their ongoing commitment to student life and aviation at McGill.
+                  <h2 class="text-4xl font-semibold text-white mb-6">
+                    Engineering Undergraduate Society (EUS)
+                  </h2>
+                  <p
+                    class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                  >
+                    The McGill Engineering Undergraduate Society (EUS) is a key
+                    financial partner of the McGill Flying Club. Their support
+                    helps us offer affordable training, events, and
+                    opportunities to our members. We are grateful for their
+                    ongoing commitment to student life and aviation at McGill.
                   </p>
-                  <a href="https://mcgilleus.ca/index.html" target="_blank" rel="noopener" class="text-blue-400 underline">Visit EUS</a>
+                  <a
+                    href="https://mcgilleus.ca/index.html"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-blue-400 underline">Visit EUS</a
+                  >
                 </div>
               </template>
             </details>
           </div>
         </div>
         <!-- training partners -->
-        <div :class="open === 'training' ? 'flex-[3] z-10 bg-zinc-950' : (open ? 'hidden' : 'flex-1')" class="flex-1 p-2 shadow-md mb-4 transition-all duration-500 flex flex-col justify-between">
-          <h1 class="text-4xl font-semibold text-white align-middle text-center p-4">training partners</h1>
+        <div
+          :class="open === 'training' ? 'flex-[3] z-10 bg-zinc-950' : (open ? 'hidden' : 'flex-1')"
+          class="flex-1 p-2 shadow-md mb-4 transition-all duration-500 flex flex-col justify-between"
+        >
+          <h1
+            class="text-4xl font-semibold text-white align-middle text-center p-4"
+          >
+            training partners
+          </h1>
           <div class="flex flex-col flex-1 justify-end">
             <div class="flex flex-row gap-x-3 justify-center mb-6">
-                <div class="p-2 border-4 border-gray-400 shadow-md rounded-full"><Image src={almLogo} alt="ALM Par Avion logo" class="w-40 aspect-square object-contain p-2 " /></div>
-                <div class="p-2 border-4 border-gray-400 shadow-md rounded-full bg-white"><Image src={voltigeLogo} alt="Parachute Voltige logo" class="w-40 aspect-square object-contain p-2" /></div>
+              <div class="p-2 border-4 border-gray-400 shadow-md rounded-full">
+                <Image
+                  src={almLogo}
+                  alt="ALM Par Avion logo"
+                  class="w-40 aspect-square object-contain p-2"
+                />
+              </div>
+              <div
+                class="p-2 border-4 border-gray-400 shadow-md rounded-full bg-white"
+              >
+                <Image
+                  src={voltigeLogo}
+                  alt="Parachute Voltige logo"
+                  class="w-40 aspect-square object-contain p-2"
+                />
+              </div>
             </div>
-            <details :open="open === 'training'" class="mb-2 bg-zinc-950 rounded-lg shadow p-2">
-              <summary @click.prevent="open = open === 'training' ? null : 'training'" class="flex items-center gap-2 text-2xl font-semibold text-white align-middle p-2 select-none cursor-pointer">
+            <details
+              :open="open === 'training'"
+              class="mb-2 bg-zinc-950 rounded-lg shadow p-2"
+            >
+              <summary
+                @click.prevent="open = open === 'training' ? null : 'training'"
+                class="flex items-center gap-2 text-2xl font-semibold text-white align-middle p-2 select-none cursor-pointer"
+              >
                 <span class="custom-arrow transition-transform duration-200">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                    <path d="M9 6l6 6-6 6"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 6l6 6-6 6"></path>
                   </svg>
                 </span>
                 our training partners
               </summary>
               <template x-if="open === 'training'">
                 <div class="my-8">
-                    <div id="partner" class="mb-16">
-                  <div class="flex flex-row mb-8">
-                    <Image src={partnersFlightTraining1} alt="Flight Training - Aircraft on Ramp" class="w-1/2 aspect-2/1 object-cover shadow-md" />
-                    <Image src={partnersFlightTraining2} alt="Flight Training - In front of the Plane" class="w-1/2 aspect-2/1 object-cover shadow-md" />
-                  </div>
-                  <h2 class="text-4xl font-semibold text-white mb-6">flight training partners</h2>
-                  <div class="flex flex-row gap-8 items-center mb-4">
-                    <Image src={almLogo} alt="ALM Par Avion logo" class="w-48 h-48 object-contain rounded-lg  p-2 shadow-md" />
-                    <div class="flex-1">
-                      <h2 class="text-3xl font-semibold text-white mb-2">ALM Par Avion</h2>
-                      <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                        We are proud partners with <strong>ALM Par Avion</strong> based at Montreal/Beloeil (CSB3). Our partnership makes starting or continuing flight training easier and ensures up-to-date, accurate information. In case of conflicting info, ALM Par Avion's website takes precedence. We offer discounted rates for our members, making flight training more accessible and affordable. ALM Par Avion also taught our ground school for the 2024-2025 year, providing expert instruction to our members.
-                      </p>
-                    </div>
-                  </div>
-                  <h3 class="text-2xl font-semibold text-white mb-2">school and airport overview</h3>
-                  <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                    ALM Par Avion is a local Montreal flight training unit at Gilles-Beaudet Airport in Saint-Mathieu de Beloeil. The school has a club-like atmosphere, offering many ratings issued by Transport Canada.
-                  </p>
-                  <div class="flex flex-row justify-center items-stretch mb-8">
-                    <Image src={partnersAlm1} alt="ALM Par Avion airport" class="w-1/2 aspect-3/2 object-cover" />
-                    <Image src={partnersAlm2} alt="ALM Par Avion field" class="w-1/2 aspect-3/2 object-cover" />
-                  </div>
-                  <h3 class="text-2xl font-semibold text-white mb-2">instruction offered</h3>
-                  <ul class="list-disc list-inside text-zinc-200 mb-2">
-                    <li>Private Pilot's License</li>
-                    <li>Commercial Pilot's License</li>
-                    <li>Night Rating</li>
-                    <li>VFR OTT</li>
-                    <li>Instrument Rating (Class 1 or 3)</li>
-                  </ul>
-                  <a href="https://almparavion.com/" target="_blank" rel="noopener" class="text-blue-400 underline ">Visit ALM Par Avion</a>
-                </div>
                   <div id="partner" class="mb-16">
                     <div class="flex flex-row mb-8">
-                      <Image src={partnersSkydiving1} alt="Skydiving - Group on the Dropzone" class="w-1/2 aspect-2/1 object-cover shadow-md" />
-                      <Image src={partnersSkydiving2} alt="Skydiving - In Freefall" class="w-1/2 aspect-2/1 object-cover shadow-md" />
+                      <Image
+                        src={partnersFlightTraining1}
+                        alt="Flight Training - Aircraft on Ramp"
+                        class="w-1/2 aspect-2/1 object-cover shadow-md"
+                      />
+                      <Image
+                        src={partnersFlightTraining2}
+                        alt="Flight Training - In front of the Plane"
+                        class="w-1/2 aspect-2/1 object-cover shadow-md"
+                      />
                     </div>
-                    <h2 class="text-4xl font-semibold text-white mb-6">skydiving partner</h2>
+                    <h2 class="text-4xl font-semibold text-white mb-6">
+                      flight training partners
+                    </h2>
                     <div class="flex flex-row gap-8 items-center mb-4">
-                      <Image src={voltigeLogo} alt="Parachute Voltige logo" class="w-48 h-48 bg-white rounded-lg object-contain p-2 shadow-md" />
+                      <Image
+                        src={almLogo}
+                        alt="ALM Par Avion logo"
+                        class="w-48 h-48 object-contain rounded-lg p-2 shadow-md"
+                      />
                       <div class="flex-1">
-                        <h2 class="text-3xl font-semibold text-white mb-2">Parachute Voltige</h2>
-                        <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                          Parachute Voltige is our trusted skydiving training partner, providing McGill Flying Club members with access to professional instruction, modern facilities, and a welcoming community. Their experienced instructors guide students from their first tandem jump through solo certification and beyond, ensuring a safe and supportive environment for all levels. Whether you're looking to experience the thrill of freefall for the first time or pursue advanced skydiving skills, Voltige offers the expertise and opportunities to help you achieve your goals.
+                        <h2 class="text-3xl font-semibold text-white mb-2">
+                          ALM Par Avion
+                        </h2>
+                        <p
+                          class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                        >
+                          We are proud partners with <strong
+                            >ALM Par Avion</strong
+                          > based at Montreal/Beloeil (CSB3). Our partnership makes
+                          starting or continuing flight training easier and ensures
+                          up-to-date, accurate information. In case of conflicting
+                          info, ALM Par Avion's website takes precedence. We offer
+                          discounted rates for our members, making flight training
+                          more accessible and affordable. ALM Par Avion also taught
+                          our ground school for the 2024-2025 year, providing expert
+                          instruction to our members.
                         </p>
                       </div>
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-2">school overview</h3>
-                    <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                      Located in Joliette, Parachute Voltige brings the beach to the skies with its lively atmosphere and thrilling group activities. Every year, we celebrate first-time jumpers with our annual BBQ Beach Party, blending adrenaline, great food, and summer vibes!
+                    <h3 class="text-2xl font-semibold text-white mb-2">
+                      school and airport overview
+                    </h3>
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      ALM Par Avion is a local Montreal flight training unit at
+                      Gilles-Beaudet Airport in Saint-Mathieu de Beloeil. The
+                      school has a club-like atmosphere, offering many ratings
+                      issued by Transport Canada.
                     </p>
-                    <div class="flex flex-row gap-4 justify-center items-stretch mb-8">
-                      <Image src={partnersVoltige1} alt="Parachute Voltige dropzone" class="w-1/2 max-w-md max-h-72 h-full rounded-lg shadow-md object-cover" />
-                      <Image src={partnersVoltige2} alt="Parachute Voltige group activity" class="w-1/2 max-w-md max-h-72 h-full rounded-lg shadow-md object-cover" />
+                    <div
+                      class="flex flex-row justify-center items-stretch mb-8"
+                    >
+                      <Image
+                        src={partnersAlm1}
+                        alt="ALM Par Avion airport"
+                        class="w-1/2 aspect-3/2 object-cover"
+                      />
+                      <Image
+                        src={partnersAlm2}
+                        alt="ALM Par Avion field"
+                        class="w-1/2 aspect-3/2 object-cover"
+                      />
                     </div>
-                    <h3 class="text-2xl font-semibold text-white mb-2">ratings & instructor qualifications offered</h3>
+                    <h3 class="text-2xl font-semibold text-white mb-2">
+                      instruction offered
+                    </h3>
                     <ul class="list-disc list-inside text-zinc-200 mb-2">
-                      <li><strong>Brevet A, B, C, D</strong> (progressive skydiving licenses)</li>
-                      <li><strong>Group jumps & formation skydiving</strong> (VR2, VR4, group VR, night and water jumps)</li>
-                      <li><strong>Sport canopy endorsements</strong> (Voilure Sportive A, B, etc.)</li>
-                      <li><strong>Packing & emergency procedures</strong> (main canopy packing, emergency drills)</li>
-                      <li><strong>Instructor & Coach Ratings</strong> (Coach 1, Coach 2, Instructor: classroom, radio, PAC, tandem, wingsuit, canopy piloting, examiner)</li>
+                      <li>Private Pilot's License</li>
+                      <li>Commercial Pilot's License</li>
+                      <li>Night Rating</li>
+                      <li>VFR OTT</li>
+                      <li>Instrument Rating (Class 1 or 3)</li>
                     </ul>
-                    <a href="https://parachutevoltige.com/" target="_blank" rel="noopener" class="text-blue-400 underline">Visit Parachute Voltige</a>
+                    <a
+                      href="https://almparavion.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-blue-400 underline">Visit ALM Par Avion</a
+                    >
+                  </div>
+                  <div id="partner" class="mb-16">
+                    <div class="flex flex-row mb-8">
+                      <Image
+                        src={partnersSkydiving1}
+                        alt="Skydiving - Group on the Dropzone"
+                        class="w-1/2 aspect-2/1 object-cover shadow-md"
+                      />
+                      <Image
+                        src={partnersSkydiving2}
+                        alt="Skydiving - In Freefall"
+                        class="w-1/2 aspect-2/1 object-cover shadow-md"
+                      />
+                    </div>
+                    <h2 class="text-4xl font-semibold text-white mb-6">
+                      skydiving partner
+                    </h2>
+                    <div class="flex flex-row gap-8 items-center mb-4">
+                      <Image
+                        src={voltigeLogo}
+                        alt="Parachute Voltige logo"
+                        class="w-48 h-48 bg-white rounded-lg object-contain p-2 shadow-md"
+                      />
+                      <div class="flex-1">
+                        <h2 class="text-3xl font-semibold text-white mb-2">
+                          Parachute Voltige
+                        </h2>
+                        <p
+                          class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                        >
+                          Parachute Voltige is our trusted skydiving training
+                          partner, providing McGill Flying Club members with
+                          access to professional instruction, modern facilities,
+                          and a welcoming community. Their experienced
+                          instructors guide students from their first tandem
+                          jump through solo certification and beyond, ensuring a
+                          safe and supportive environment for all levels.
+                          Whether you're looking to experience the thrill of
+                          freefall for the first time or pursue advanced
+                          skydiving skills, Voltige offers the expertise and
+                          opportunities to help you achieve your goals.
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">
+                      school overview
+                    </h3>
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      Located in Joliette, Parachute Voltige brings the beach to
+                      the skies with its lively atmosphere and thrilling group
+                      activities. Every year, we celebrate first-time jumpers
+                      with our annual BBQ Beach Party, blending adrenaline,
+                      great food, and summer vibes!
+                    </p>
+                    <div
+                      class="flex flex-row gap-4 justify-center items-stretch mb-8"
+                    >
+                      <Image
+                        src={partnersVoltige1}
+                        alt="Parachute Voltige dropzone"
+                        class="w-1/2 max-w-md max-h-72 h-full rounded-lg shadow-md object-cover"
+                      />
+                      <Image
+                        src={partnersVoltige2}
+                        alt="Parachute Voltige group activity"
+                        class="w-1/2 max-w-md max-h-72 h-full rounded-lg shadow-md object-cover"
+                      />
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">
+                      ratings & instructor qualifications offered
+                    </h3>
+                    <ul class="list-disc list-inside text-zinc-200 mb-2">
+                      <li>
+                        <strong>Brevet A, B, C, D</strong> (progressive skydiving
+                        licenses)
+                      </li>
+                      <li>
+                        <strong>Group jumps & formation skydiving</strong> (VR2,
+                        VR4, group VR, night and water jumps)
+                      </li>
+                      <li>
+                        <strong>Sport canopy endorsements</strong> (Voilure Sportive
+                        A, B, etc.)
+                      </li>
+                      <li>
+                        <strong>Packing & emergency procedures</strong> (main canopy
+                        packing, emergency drills)
+                      </li>
+                      <li>
+                        <strong>Instructor & Coach Ratings</strong> (Coach 1, Coach
+                        2, Instructor: classroom, radio, PAC, tandem, wingsuit, canopy
+                        piloting, examiner)
+                      </li>
+                    </ul>
+                    <a
+                      href="https://parachutevoltige.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-blue-400 underline">Visit Parachute Voltige</a
+                    >
                   </div>
                 </div>
               </template>
@@ -164,18 +369,54 @@ details[open] .custom-arrow {
           </div>
         </div>
         <!-- service partners -->
-        <div :class="open === 'gear' ? 'flex-[3] z-10 bg-zinc-950' : (open ? 'hidden' : 'flex-1')" class="flex-1 p-2 shadow-md mb-4 transition-all duration-500 flex flex-col justify-between">
-          <h1 class="text-4xl font-semibold text-white align-middle text-center p-4">service providers</h1>
+        <div
+          :class="open === 'gear' ? 'flex-[3] z-10 bg-zinc-950' : (open ? 'hidden' : 'flex-1')"
+          class="flex-1 p-2 shadow-md mb-4 transition-all duration-500 flex flex-col justify-between"
+        >
+          <h1
+            class="text-4xl font-semibold text-white align-middle text-center p-4"
+          >
+            service providers
+          </h1>
           <div class="flex flex-col flex-1 justify-end">
             <div class="flex flex-row gap-x-3 justify-center mb-6">
-                <div class="p-2 border-4 border-orange-800 shadow-md rounded-full "><Image src={redCanoeLogo} alt="Red Canoe logo" class="w-25 aspect-square object-contain p-2 " /></div>
-                <div class="p-2 border-4 border-orange-800 shadow-md rounded-full "><Image src={redBullLogo} alt="Red Bull logo" class="w-25 aspect-square object-contain  " /></div>
+              <div
+                class="p-2 border-4 border-orange-800 shadow-md rounded-full"
+              >
+                <Image
+                  src={redCanoeLogo}
+                  alt="Red Canoe logo"
+                  class="w-25 aspect-square object-contain p-2"
+                />
+              </div>
+              <div
+                class="p-2 border-4 border-orange-800 shadow-md rounded-full"
+              >
+                <Image
+                  src={redBullLogo}
+                  alt="Red Bull logo"
+                  class="w-25 aspect-square object-contain"
+                />
+              </div>
             </div>
-            <details :open="open === 'gear'" class="mb-2 bg-zinc-950 rounded-lg shadow p-2">
-              <summary @click.prevent="open = open === 'gear' ? null : 'gear'" class="flex items-center gap-2 text-2xl font-semibold text-white align-middle p-2 select-none cursor-pointer">
+            <details
+              :open="open === 'gear'"
+              class="mb-2 bg-zinc-950 rounded-lg shadow p-2"
+            >
+              <summary
+                @click.prevent="open = open === 'gear' ? null : 'gear'"
+                class="flex items-center gap-2 text-2xl font-semibold text-white align-middle p-2 select-none cursor-pointer"
+              >
                 <span class="custom-arrow transition-transform duration-200">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                    <path d="M9 6l6 6-6 6"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 6l6 6-6 6"></path>
                   </svg>
                 </span>
                 our service providers
@@ -183,13 +424,37 @@ details[open] .custom-arrow {
               <template x-if="open === 'gear'">
                 <div>
                   <div class="my-8">
-                    <h2 class="text-4xl font-semibold text-white mb-6">Red Canoe</h2>
-                    <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                      Red Canoe was born in a bush plane over the pristine wilderness of Northern Ontario in 1999. Inspired by Canadian icons like the legendary deHavilland DHC-2 Beaver, they create premium gear that celebrates the rugged, hardworking Canadian lifestyle. Their product line honors the stories of Canadian pioneers who pushed the limits of possibility in the face of adversity.
-                      As proud partners of the McGill Flying Club, Red Canoe provides our members with high-quality aviation-inspired gear and apparel. From durable outerwear to accessories that embody the spirit of Canadian aviation heritage, their products are designed for those who appreciate both style and functionality.
+                    <h2 class="text-4xl font-semibold text-white mb-6">
+                      Red Canoe
+                    </h2>
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      Red Canoe was born in a bush plane over the pristine
+                      wilderness of Northern Ontario in 1999. Inspired by
+                      Canadian icons like the legendary deHavilland DHC-2
+                      Beaver, they create premium gear that celebrates the
+                      rugged, hardworking Canadian lifestyle. Their product line
+                      honors the stories of Canadian pioneers who pushed the
+                      limits of possibility in the face of adversity. As proud
+                      partners of the McGill Flying Club, Red Canoe provides our
+                      members with high-quality aviation-inspired gear and
+                      apparel. From durable outerwear to accessories that embody
+                      the spirit of Canadian aviation heritage, their products
+                      are designed for those who appreciate both style and
+                      functionality.
                     </p>
-                    <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                      <strong>Exclusive Club Discount:</strong> McGill Flying Club members receive a special discount on all Red Canoe products. Use our exclusive discount code <span class="discount-code" data-code="MCGILL_FLYINGCLUB2025" onclick="revealCode(this)">[Click to reveal]</span> at checkout to access member-only pricing on their entire collection of Canadian heritage-inspired gear.
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      <strong>Exclusive Club Discount:</strong> McGill Flying Club
+                      members receive a special discount on all Red Canoe products.
+                      Use our exclusive discount code <span
+                        class="discount-code"
+                        data-code="MCGILL_FLYINGCLUB2025"
+                        onclick="revealCode(this)">[Click to reveal]</span
+                      > at checkout to access member-only pricing on their entire
+                      collection of Canadian heritage-inspired gear.
                     </p>
                     <!-- hiding discount code from webscrapers -->
                     <style>
@@ -205,29 +470,68 @@ details[open] .custom-arrow {
                     </style>
                     <script>
                       function revealCode(element) {
-                        const code = element.getAttribute('data-code');
+                        const code = element.getAttribute("data-code");
                         element.textContent = code;
-                        element.style.fontWeight = 'bold';
+                        element.style.fontWeight = "bold";
                         element.onclick = null;
                       }
                     </script>
                     <div class="flex justify-center my-2">
-                      <iframe title="vimeo-player" src="https://player.vimeo.com/video/141587506?h=423208d501" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" allowfullscreen class="w-full max-w-2xl rounded-lg shadow-md"></iframe>
+                      <iframe
+                        title="vimeo-player"
+                        src="https://player.vimeo.com/video/141587506?h=423208d501"
+                        width="640"
+                        height="360"
+                        frameborder="0"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                        allowfullscreen
+                        class="w-full max-w-2xl rounded-lg shadow-md"></iframe>
                     </div>
-                    <a href="https://redcanoebrands.com/" target="_blank" rel="noopener" class="text-blue-400 underline">Visit Red Canoe</a>
+                    <a
+                      href="https://redcanoebrands.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-blue-400 underline">Visit Red Canoe</a
+                    >
                   </div>
                   <div class="my-8">
-                    <h2 class="text-4xl font-semibold text-white mb-6">Red Bull</h2>
-                    <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                      Red Bull is our official energy drink partner, providing the fuel that keeps our pilots and skydivers performing at their peak during our most intense events and training sessions.
+                    <h2 class="text-4xl font-semibold text-white mb-6">
+                      Red Bull
+                    </h2>
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      Red Bull is our official energy drink partner, providing
+                      the fuel that keeps our pilots and skydivers performing at
+                      their peak during our most intense events and training
+                      sessions.
                     </p>
-                    <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                      From early morning flight training sessions to adrenaline-pumping skydiving events, Red Bull helps our members stay focused, alert, and energized. Their support ensures that whether you're navigating complex flight patterns or experiencing the thrill of freefall, you have the mental and physical stamina to perform at your best.
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      From early morning flight training sessions to
+                      adrenaline-pumping skydiving events, Red Bull helps our
+                      members stay focused, alert, and energized. Their support
+                      ensures that whether you're navigating complex flight
+                      patterns or experiencing the thrill of freefall, you have
+                      the mental and physical stamina to perform at your best.
                     </p>
-                    <p class="text-zinc-200 text-lg leading-relaxed text-justify mb-2">
-                      <strong>Event Support:</strong> Red Bull provides refreshments for our high-intensity events including advanced flight training sessions, skydiving competitions, and special aviation workshops. Their products help maintain the energy levels needed for peak performance in demanding aviation activities.
+                    <p
+                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                    >
+                      <strong>Event Support:</strong> Red Bull provides refreshments
+                      for our high-intensity events including advanced flight training
+                      sessions, skydiving competitions, and special aviation workshops.
+                      Their products help maintain the energy levels needed for peak
+                      performance in demanding aviation activities.
                     </p>
-                    <a href="https://www.redbull.com/" target="_blank" rel="noopener" class="text-blue-400 underline">Visit Red Bull</a>
+                    <a
+                      href="https://www.redbull.com/"
+                      target="_blank"
+                      rel="noopener"
+                      class="text-blue-400 underline">Visit Red Bull</a
+                    >
                   </div>
                 </div>
               </template>
