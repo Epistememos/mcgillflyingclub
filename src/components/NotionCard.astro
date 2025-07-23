@@ -82,7 +82,7 @@ const sizeClasses = {
 
 <div class={`notion-card bg-zinc-900 rounded-lg border border-zinc-700 shadow-sm shadow-black/30 hover:shadow-md transition-shadow duration-200 ${onClick ? 'cursor-pointer' : ''} ${className} ${sizeClasses.card}`} data-onclick={onClick ? 'true' : 'false'}>
   {image && (
-    <div class={`notion-card-image w-full ${sizeClasses.image} ${imageBg} p-2 rounded-t-lg overflow-hidden`}>
+    <div class={`notion-card-image w-full ${sizeClasses.image} ${imageBg} p-2 rounded-t-lg`}>
       <Image src={image} alt={imageAlt} class="w-full h-full object-cover" />
     </div>
   )}

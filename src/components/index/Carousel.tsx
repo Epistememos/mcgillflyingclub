@@ -39,7 +39,7 @@ export default function Carousel() {
         setCurrentSlide(index);
     };
 
-    return <section id="banner" className="relative overflow-hidden">
+    return <section id="banner">
         <div className="relative">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
