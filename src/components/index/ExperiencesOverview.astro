@@ -3,78 +3,118 @@ import { Image } from "astro:assets";
 import experience1 from "../../assets/images/experience1.jpg";
 import experience2 from "../../assets/images/experience2.jpg";
 import experience3 from "../../assets/images/experience3.jpg";
-import experience4 from "../../assets/images/experience4.jpg";
+import experience5 from "../../assets/images/experience5.jpg";
+import experience6 from "../../assets/images/experience6.jpg";
+import experience7 from "../../assets/images/experience7.jpg";
+import experience8 from "../../assets/images/experience8.jpg";
 
 const experiences = [
     {
         image: experience1,
         alt: "pilots in a cessna",
-        title: "discovery flights",
-        description: "Up to 3 passengers can enjoy a breathtaking flight over Montreal, the Laurentians, or to a gourmet brunch destination. Sit back, relax, and take in the views from above!",
+        title: "pilot for a day",
+        description:
+            "Up to 3 passengers can enjoy a breathtaking flight over Montreal, the Laurentians, or to a gourmet brunch destination. Sit back, relax, and take in the views from above!",
         buttons: [
             { text: "learn more", style: "bg-white text-black" },
-            { text: "book now", style: "bg-black text-white" }
-        ]
+            { text: "book now", style: "bg-black text-white" },
+        ],
     },
     {
         image: experience2,
         alt: "skydiving students entering a plane",
         title: "skydiving",
-        description: "We host full-day skydiving trips for groups of up to 40 university students at our Joliette location. Experience tandem jumps with certified instructors, then unwind in our beach-inspired lounge area.",
+        description:
+            "We host full-day skydiving trips for groups of up to 40 university students at our Joliette location. Experience tandem jumps with certified instructors, then unwind in our beach-inspired lounge area.",
         buttons: [
             { text: "sign up", style: "bg-black text-white" },
-            { text: "learn more", style: "bg-white text-black" }
-        ]
+            { text: "learn more", style: "bg-white text-black" },
+        ],
     },
     {
         image: experience3,
         alt: "simulator",
         title: "simulator nights",
-        description: "Gather your crew (up to 20 aviators) for an epic evening in the cockpit! Our flight sims let you pilot jets, navigate storms, and maybe even crash (safely!).",
+        description:
+            "Gather your crew (up to 20 aviators) for an epic evening in the cockpit! Our flight sims let you pilot jets, navigate storms, and maybe even crash (safely!).",
         buttons: [
             { text: "learn more", style: "bg-white text-black" },
-            { text: "sign up", style: "bg-black text-white" }
-        ]
+            { text: "sign up", style: "bg-black text-white" },
+        ],
     },
     {
-        image: experience4,
-        alt: "social events",
-        title: "socials",
-        description: "We host casual gatherings for university students, including movie screenings, game nights, outdoor picnics, and aviation themed parties.",
-        buttons: [
-            { text: "next event", style: "bg-black text-white" },
-            { text: "learn more", style: "bg-white text-black" }
-        ]
+        image: experience8,
+        alt: "industry tours",
+        title: "Industry Tours",
+        description:
+            "Explore the aviation industry with exclusive tours of local companies and organizations. Meet professionals, see cutting-edge technology, and learn about career opportunities.",
+        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+    },
+    {
+        image: experience6,
+        alt: "movie nights",
+        title: "Movie Nights",
+        description:
+            "Join us for our monthly (?) movie nights, where we screen aviation classics like Top Gun. Enjoy food, drinks, and meet every member of the club!",
+        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+    },
+    {
+        image: experience7,
+        alt: "beach party",
+        title: "Top Gun Beach Parties",
+        description:
+            "Join us for our legendary Top Gun Beach Parties! Enjoy a day of sun, sand, and aviation-themed fun with fellow club members. Food, drinks, and games await!",
+        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+    },
+    {
+        image: experience5,
+        alt: "info nights",
+        title: "Info Nights",
+        description:
+            "Curious about aviation? Join us for our Info Nights to learn more about the club, our activities, and how you can get involved. As current members, help us welcome new faces and meet the next generation of aviators!",
+        buttons: [{ text: "learn more", style: "bg-white text-black" }],
     }
 ];
 ---
 
 <section class="py-16 px-8">
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-5xl text-center font-bold text-white mb-16">experiences</h2>
-        <div class="space-y-4">
-            {experiences.map((experience, index) => (
-                <div class={`flex flex-col sm:flex-row gap-8 items-center ${index % 2 === 1 ? 'sm:flex-row-reverse' : ''}`}>
-                    <div class="flex-1">
-                        <Image
-                            src={experience.image}
-                            alt={experience.alt}
-                            class="w-full aspect-3/2 object-cover rounded-lg"
-                        />
-                    </div>
-                    <div class="flex-1 space-y-4">
-                        <h3 class="text-2xl font-bold text-white">{experience.title}</h3>
-                        <p class="text-white leading-relaxed">{experience.description}</p>
-                        <div class="flex gap-4">
-                            {experience.buttons.map((button) => (
-                                <button class={`${button.style} px-4 py-2 rounded-md text-sm font-medium transition-colors hover:opacity-90`}>
-                                    {button.text}
-                                </button>
-                            ))}
+        <h2 class="text-5xl text-center font-bold text-white mb-16">
+            experiences
+        </h2>
+        <div class="space-y-16">
+            {
+                experiences.map((experience, index) => (
+                    <div
+                        class={`flex flex-col sm:flex-row gap-8 items-center ${index % 2 === 1 ? "sm:flex-row-reverse" : ""}`}
+                    >
+                        <div class="flex-1">
+                            <Image
+                                src={experience.image}
+                                alt={experience.alt}
+                                class="w-full aspect-3/2 object-cover rounded-lg"
+                            />
+                        </div>
+                        <div class="flex-1 space-y-4">
+                            <h3 class="text-2xl font-bold text-white">
+                                {experience.title}
+                            </h3>
+                            <p class="text-white leading-relaxed">
+                                {experience.description}
+                            </p>
+                            <div class="flex gap-4">
+                                {experience.buttons.map((button) => (
+                                    <button
+                                        class={`${button.style} px-4 py-2 rounded-md text-sm font-medium transition-colors hover:opacity-90`}
+                                    >
+                                        {button.text}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))
+            }
         </div>
     </div>
 </section>
