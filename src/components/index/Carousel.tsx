@@ -40,13 +40,13 @@ export default function Carousel() {
     };
 
     return <section id="banner">
-        <div className="relative">
+        <div className="relative overflow-x-hidden">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
                 {slides.map((slide, index) => (
-                    <article key={index} className="min-w-full relative aspect-3/1 min-h-72">
+                    <article key={index} className="min-w-full relative aspect-3/1 min-h-96">
                         <img
                             src={slide.src}
                             alt={slide.alt}
