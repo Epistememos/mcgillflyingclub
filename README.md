@@ -11,7 +11,7 @@
 │   ├── components/
 │   │   ├── Header.astro
 │   │   ├── Footer.astro
-│   │   └── Navigation.astro
+│   │   └── Navigation.tsx
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
