@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import Navigation from '../components/Navigation.tsx';
+import Navigation from "../components/Navigation";
 import Footer from '../components/Footer.astro';
 import trainingBanner1 from '../assets/images/training-banner1.jpg';
 import trainingBanner2 from '../assets/images/training-banner2.jpg';
@@ -20,7 +20,7 @@ import flowchart from '../assets/images/flowchart.png';
 ---
 
 <Layout>
-  <Navigation />
+  <Navigation client:load/>
     <div class="grid grid-cols-2 w-full">
       <div>
         <Image src={trainingBanner1} alt="Flight training in action" class="w-full h-full object-cover shadow-md" />
@@ -50,7 +50,7 @@ import flowchart from '../assets/images/flowchart.png';
           To earn your Private Pilot License (PPL), you'll need to complete both theoretical and practical components. Transport Canada requires <strong>45 hours of ground school instruction</strong> covering aviation theory, regulations, and navigation, plus <strong>45 hours of flight training</strong> including dual instruction with a certified flight instructor and solo flight time. This comprehensive approach ensures you develop both the knowledge and skills needed to safely operate an aircraft.
         </p>
 
-      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4">
+      <details id="groundschool" class="mb-8 bg-zinc-900 rounded-lg shadow p-4" open>
         <summary class="text-3xl font-semibold text-white mb-2 cursor-pointer select-none">ground school</summary>
         <div class="pt-2">
           <h3 class="text-2xl font-semibold text-white mb-2 px-8">what is ground school?</h3>
@@ -98,7 +98,7 @@ import flowchart from '../assets/images/flowchart.png';
         </div>
       </details>
 
-      <details class="mb-8 bg-zinc-900 rounded-lg shadow p-4" >
+      <details id="flight-training" class="mb-8 bg-zinc-900 rounded-lg shadow p-4" open>
         <summary class="text-3xl font-semibold text-white mb-2 cursor-pointer select-none">flight training</summary>
         <div class="pt-2">
           
@@ -178,7 +178,7 @@ import flowchart from '../assets/images/flowchart.png';
     </section>
 
 
-    <section>
+    <section id="skydiving-license">
       <h2 class="text-5xl font-bold text-white mb-12 text-center">skydiving license</h2>
       <div class=" mx-auto text-zinc-200 text-lg leading-relaxed mb-8">
         <p>

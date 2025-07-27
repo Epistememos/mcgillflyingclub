@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import Navigation from "../components/Navigation.tsx";
+import Navigation from "../components/Navigation";
 import Footer from "../components/Footer.astro";
 import partnersAlm1 from "../assets/images/partners-alm1.jpg";
 import partnersAlm2 from "../assets/images/partners-alm2.jpg";
@@ -32,7 +32,7 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
 </style>
 
 <Layout>
-  <Navigation />
+  <Navigation client:load/>
   <div class="grid w-full">
     <div>
       <Image
@@ -521,8 +521,7 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                       class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
                     >
                       <strong>Event Support:</strong> Red Bull provides refreshments
-                      for our high-intensity events including advanced flight training
-                      sessions, skydiving competitions, and special aviation workshops.
+                      for our high-intensity events including our skydiving event, Top Gun Beach Parties, and special aviation workshops.
                       Their products help maintain the energy levels needed for peak
                       performance in demanding aviation activities.
                     </p>

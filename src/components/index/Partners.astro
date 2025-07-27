@@ -1,19 +1,23 @@
 ---
-import alm_logo from "../../assets/images/alm-logo.png";
+import almLogo from "../../assets/images/alm-logo.png";
 import voltige_logo from "../../assets/images/voltige-logo.png";
 import red_canoe_logo from "../../assets/images/red-canoe-logo.png";
+import eusLogo from "../../assets/images/eus-logo.png"
+import redbull_logo from "../../assets/images/red-bull-logo.png";
 import NotionCard from "../../components/NotionCard.astro";
 
 const partners = [
     {
-        title: "ALM Par Avion",
-        image: alm_logo,
-        imageAlt: "ALM par avion logo",
+        title: "EUS",
+        image: eusLogo,
+        imageAlt: "EUS Logo",
         imageBg: "",
+        size: "large",
         properties: {
+            
             Type: {
                 type: "select",
-                value: "Training Partner",
+                value: "Financial Partner",
                 color: "green",
             },
             Tier: {
@@ -23,7 +27,30 @@ const partners = [
             },
             Website: {
                 type: "url",
-                value: "https://almparavion.ca",
+                value: "https://mcgilleus.ca/",
+            },
+        }
+    },
+    {
+        title: "ALM Par Avion",
+        image: almLogo,
+        imageAlt: "ALM par avion logo",
+        imageBg: "",
+        size: "medium",
+        properties: {
+            Type: {
+                type: "select",
+                value: "Flight Partner",
+                color: "blue",
+            },
+            Tier: {
+                type: "select",
+                value: "Silver",
+                color: "gray",
+            },
+            Website: {
+                type: "url",
+                value: "https://almparavion.com/",
             },
         }
     },
@@ -32,16 +59,17 @@ const partners = [
         image: voltige_logo,
         imageAlt: "Parachute Voltige logo",
         imageBg: "bg-white",
+        size: "medium",
         properties: {
             Type: {
                 type: "select",
-                value: "Training Partner",
-                color: "green",
+                value: "Skydiving Partner",
+                color: "cyan",
             },
             Tier: {
                 type: "select",
-                value: "Bronze",
-                color: "orange",
+                value: "Silver",
+                color: "gray",
             },
             Website: {
                 type: "url",
@@ -54,6 +82,7 @@ const partners = [
         image: red_canoe_logo,
         imageAlt: "Red Canoe logo",
         imageBg: "",
+        size: "small",
         properties: {
             Type: {
                 type: "select",
@@ -62,17 +91,66 @@ const partners = [
             },
             Tier: {
                 type: "select",
-                value: "Silver",
-                color: "gray",
+                value: "Bronze",
+                color: "orange",
             },
             Website: {
                 type: "url",
                 value: "https://redcanoebrands.com/",
             },
         }
+    },
+    {
+        title: "Red Bull",
+        image: redbull_logo,
+        imageAlt: "Red Bull logo",
+        imageBg: "",
+        size: "small",
+        properties: {
+            Type: {
+                type: "select",
+                value: "Beverage Partner",
+                color: "red",
+            },
+            Tier: {
+                type: "select",
+                value: "Bronze",
+                color: "orange",
+            },
+            Website: {
+                type: "url",
+                value: "https://www.redbull.com/",
+            },
+        }
     }
 ];
+
+// Split partners by size
+const largePartners = partners.filter(p => p.size === "large");
+const mediumPartners = partners.filter(p => p.size === "medium");
+const smallPartners = partners.filter(p => p.size === "small");
 ---
+
+<style>
+@keyframes card-swoop-up {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.partner-card-animate {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.partner-card-animate.visible {
+  animation: card-swoop-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--card-delay, 0ms);
+}
+</style>
 
 <section class="py-2 px-8">
     <div class="max-w-4xl mx-auto">
@@ -80,17 +158,67 @@ const partners = [
         <p class="text-2xl text-white mb-12 text-center">
             Our partners are essential to our mission. They help us provide the best training and experiences for our students.
         </p>
-        <div class="flex flex-wrap gap-6 justify-center">
-            {partners.map((partner) => (
-                <NotionCard
-                    title={partner.title}
-                    image={partner.image}
-                    imageAlt={partner.imageAlt}
-                    size="large"
-                    imageBg={partner.imageBg}
-                    properties={partner.properties}
-                />
-            ))}
+        <div class="space-y-8">
+            <div class="flex flex-wrap gap-6 justify-center">
+                {largePartners.map((partner, idx) => (
+                    <NotionCard
+                        class="partner-card-animate"
+                        style={`--card-delay: ${idx * 100}ms`}
+                        title={partner.title}
+                        image={partner.image}
+                        imageAlt={partner.imageAlt}
+                        size={partner.size}
+                        imageBg={partner.imageBg}
+                        properties={partner.properties}
+                    />
+                ))}
+            </div>
+            <div class="flex flex-wrap gap-6 justify-center">
+                {mediumPartners.map((partner, idx) => (
+                    <NotionCard
+                        class="partner-card-animate"
+                        style={`--card-delay: ${idx * 100}ms`}
+                        title={partner.title}
+                        image={partner.image}
+                        imageAlt={partner.imageAlt}
+                        size={partner.size}
+                        imageBg={partner.imageBg}
+                        properties={partner.properties}
+                    />
+                ))}
+            </div>
+            <div class="flex flex-wrap gap-6 justify-center">
+                {smallPartners.map((partner, idx) => (
+                    <NotionCard
+                        class="partner-card-animate"
+                        style={`--card-delay: ${idx * 100}ms`}
+                        title={partner.title}
+                        image={partner.image}
+                        imageAlt={partner.imageAlt}
+                        size={partner.size}
+                        imageBg={partner.imageBg}
+                        properties={partner.properties}
+                    />
+                ))}
+            </div>
         </div>
     </div>
 </section>
+
+<script type="module">
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll('.partner-card-animate');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  cards.forEach(card => observer.observe(card));
+});
+</script>

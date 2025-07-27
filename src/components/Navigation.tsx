@@ -11,7 +11,7 @@ export default function Navigation() {
           <div className="flex items-center gap-1 lg:gap-3 flex-1 mb-2 lg:mb-0">
             <h1 className="text-white text-2xl lg:text-5xl font-garamond">McGill</h1>
             <h1 className="text-white text-base lg:text-xl font-bold font-roboto pr-4 lg:pr-12">FLYING CLUB</h1>
-            <img src="/logo.png" alt="McGill Flying Club Logo" className="h-8 lg:h-10" />
+            <img src="/logo.png" alt="McGill Flying Club Logo" className="w-1/4" />
           </div>
           <button
             className="lg:hidden px-4 py-3 focus:outline-none"
@@ -41,14 +41,14 @@ export default function Navigation() {
           ))}
         </div>
       </div>
-      <div className="lg:hidden bg-gray-900/100">
+      <div className="lg:hidden bg-zinc-950/60 rounded-l-lg">
         {menuOpen && (
           <div className="px-4 py-2 space-y-2">
             {pages.map((page) => (
               <a
                 key={page}
                 href={page === "home" ? "/" : `/${page}`}
-                className="block text-white font-medium hover:text-blue-500 transition-colors duration-200"
+                className="block text-white font-medium hover:text-red-400 transition-colors duration-200 "
               >
                 {page}
               </a>

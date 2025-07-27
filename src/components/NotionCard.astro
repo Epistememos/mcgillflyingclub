@@ -14,6 +14,7 @@ export interface Props {
   className?: string;
   size?: 'small' | 'medium' | 'large';
   imageBg?: string;
+  style?: string;
 }
 
 const { 
@@ -25,6 +26,7 @@ const {
   className = '',
   size = 'medium',
   imageBg = 'bg-zinc-800',
+  style = "",
 } = Astro.props;
 
 import { Image } from 'astro:assets';
@@ -53,6 +55,7 @@ const getTagClasses = (color: string = 'default') => {
     blue: 'bg-blue-900 text-blue-200',
     purple: 'bg-purple-900 text-purple-200',
     pink: 'bg-pink-900 text-pink-200',
+    cyan: 'bg-cyan-900 text-cyan-200',
     red: 'bg-red-900 text-red-200'
   };
   return colorClasses[color as keyof typeof colorClasses] || colorClasses.default;
@@ -64,26 +67,31 @@ const safeSize: SizeType = allowedSizes.includes(size as SizeType) ? size as Siz
 const sizeClasses = {
   small: {
     card: 'p-2',
-    image: 'h-20',
+    image: 'h-24',
     title: 'text-base',
+    width: 'w-36',      // ~192px
   },
   medium: {
     card: 'p-4',
-    image: 'h-32',
+    image: 'h-32 ',
     title: 'text-lg',
+    width: 'w-48',      // ~256px
   },
   large: {
     card: 'p-8',
-    image: 'h-48',
+    image: 'h-44',
     title: 'text-2xl',
+    width: 'w-64',      // ~320px
   }
 }[safeSize];
 ---
 
-<div class={`notion-card bg-zinc-900 rounded-lg border border-zinc-700 shadow-sm shadow-black/30 hover:shadow-md transition-shadow duration-200 ${onClick ? 'cursor-pointer' : ''} ${className} ${sizeClasses.card}`} data-onclick={onClick ? 'true' : 'false'}>
+<div
+  style={style}
+  class={`notion-card bg-zinc-900 rounded-lg border border-zinc-700 shadow-sm shadow-black/30 hover:shadow-md transition-shadow duration-200 items-center ${onClick ? 'cursor-pointer' : ''} ${className} ${sizeClasses.card} ${sizeClasses.width}`} data-onclick={onClick ? 'true' : 'false'}>
   {image && (
-    <div class={`notion-card-image w-full ${sizeClasses.image} ${imageBg} p-2 rounded-t-lg`}>
-      <Image src={image} alt={imageAlt} class="w-full h-full object-cover" />
+    <div class={`flex notion-card-image justify-self-center aspect-square ${sizeClasses.image} ${imageBg} p-2 rounded-full flex items-center justify-center align-middle`}>
+      <Image src={image} alt={imageAlt} class="w-full aspect-square object-fit" />
     </div>
   )}
   
@@ -146,9 +154,12 @@ const sizeClasses = {
             )}
             
             {prop.type === 'url' && (
-              <a href={prop.value as string} target="_blank" rel="noopener noreferrer" class="text-sm text-blue-300 hover:text-blue-400 underline truncate block">
-                {prop.value as string}
-              </a>
+              <a href={prop.value as string} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-red-300 hover:text-red-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+    </svg>
+    <span class="sr-only">Open link</span>
+  </a>
             )}
             
             {prop.type === 'email' && (
@@ -215,4 +226,4 @@ const sizeClasses = {
       });
     });
   });
-</script> 
+</script>

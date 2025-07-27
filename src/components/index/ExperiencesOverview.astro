@@ -12,12 +12,12 @@ const experiences = [
     {
         image: experience1,
         alt: "pilots in a cessna",
-        title: "pilot for a day",
+        title: "discovery flights",
         description:
             "Up to 3 passengers can enjoy a breathtaking flight over Montreal, the Laurentians, or to a gourmet brunch destination. Sit back, relax, and take in the views from above!",
         buttons: [
             { text: "learn more", style: "bg-white text-black" },
-            { text: "book now", style: "bg-black text-white" },
+            { text: "try now", style: "bg-black text-white", link: "https://forms.gle/dQXzjgtWTBWWgdN29" },
         ],
     },
     {
@@ -27,8 +27,11 @@ const experiences = [
         description:
             "We host full-day skydiving trips for groups of up to 40 university students at our Joliette location. Experience tandem jumps with certified instructors, then unwind in our beach-inspired lounge area.",
         buttons: [
-            { text: "sign up", style: "bg-black text-white" },
-            { text: "learn more", style: "bg-white text-black" },
+            { 
+                text: "show interest", 
+                style: "bg-red-900 text-white", 
+                link: "https://docs.google.com/forms/d/e/1FAIpQLSfWY9RNx9Op0ufijA9FXuul_uYUdvOEPa2eb-YfeDs3g7IO-w/viewform?usp=sharing&ouid=105345800945786489176" 
+            },
         ],
     },
     {
@@ -38,64 +41,125 @@ const experiences = [
         description:
             "Gather your crew (up to 20 aviators) for an epic evening in the cockpit! Our flight sims let you pilot jets, navigate storms, and maybe even crash (safely!).",
         buttons: [
-            { text: "learn more", style: "bg-white text-black" },
-            { text: "sign up", style: "bg-black text-white" },
+            { 
+                text: "show interest", 
+                style: "bg-red-900 text-white", 
+                link: "https://docs.google.com/forms/d/e/1FAIpQLSfWY9RNx9Op0ufijA9FXuul_uYUdvOEPa2eb-YfeDs3g7IO-w/viewform?usp=sharing&ouid=105345800945786489176" 
+            },
         ],
     },
     {
         image: experience8,
         alt: "industry tours",
-        title: "Industry Tours",
+        title: "industry tours",
         description:
             "Explore the aviation industry with exclusive tours of local companies and organizations. Meet professionals, see cutting-edge technology, and learn about career opportunities.",
-        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+        buttons: [
+            { 
+                text: "show interest", 
+                style: "bg-red-900 text-white", 
+                link: "https://docs.google.com/forms/d/e/1FAIpQLSfWY9RNx9Op0ufijA9FXuul_uYUdvOEPa2eb-YfeDs3g7IO-w/viewform?usp=sharing&ouid=105345800945786489176" 
+            },
+        ],
     },
     {
         image: experience6,
         alt: "movie nights",
-        title: "Movie Nights",
+        title: "movie nights",
         description:
-            "Join us for our monthly (?) movie nights, where we screen aviation classics like Top Gun. Enjoy food, drinks, and meet every member of the club!",
-        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+            "Join us for our monthly movie nights, where we screen aviation classics. Enjoy food, drinks, and meet members of the club!",
+        buttons: [
+            { 
+                text: "show interest", 
+                style: "bg-red-900 text-white", 
+                link: "https://docs.google.com/forms/d/e/1FAIpQLSfWY9RNx9Op0ufijA9FXuul_uYUdvOEPa2eb-YfeDs3g7IO-w/viewform?usp=sharing&ouid=105345800945786489176" 
+            },
+        ],
     },
     {
         image: experience7,
         alt: "beach party",
-        title: "Top Gun Beach Parties",
+        title: "beach parties",
         description:
             "Join us for our legendary Top Gun Beach Parties! Enjoy a day of sun, sand, and aviation-themed fun with fellow club members. Food, drinks, and games await!",
-        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+        buttons: [
+            { 
+                text: "show interest", 
+                style: "bg-red-900 text-white", 
+                link: "https://docs.google.com/forms/d/e/1FAIpQLSfWY9RNx9Op0ufijA9FXuul_uYUdvOEPa2eb-YfeDs3g7IO-w/viewform?usp=sharing&ouid=105345800945786489176" 
+            },
+        ],
     },
     {
         image: experience5,
         alt: "info nights",
-        title: "Info Nights",
+        title: "info nights",
         description:
             "Curious about aviation? Join us for our Info Nights to learn more about the club, our activities, and how you can get involved. As current members, help us welcome new faces and meet the next generation of aviators!",
-        buttons: [{ text: "learn more", style: "bg-white text-black" }],
+        buttons: [
+            { 
+                text: "show interest", 
+                style: "bg-red-900 text-white", 
+                link: "https://docs.google.com/forms/d/e/1FAIpQLSfWY9RNx9Op0ufijA9FXuul_uYUdvOEPa2eb-YfeDs3g7IO-w/viewform?usp=sharing&ouid=105345800945786489176" 
+            },
+        ],
     }
 ];
+
+let expandedIndex = null;
 ---
 
-<section class="py-16 px-8">
+<style>
+@keyframes swoop-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes swoop-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(80px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+.swoop-in-left, .swoop-in-right {
+  opacity: 0;
+}
+.swoop-in-left.visible {
+  animation: swoop-in-left 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.swoop-in-right.visible {
+  animation: swoop-in-right 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+</style>
+
+<section class="py-8 px-8">
     <div class="max-w-4xl mx-auto">
-        <h2 class="text-5xl text-center font-bold text-white mb-16">
+        <h2 class="text-5xl text-center font-bold text-white mb-8">
             experiences
         </h2>
-        <div class="space-y-16">
+        <div class="space-y-4">
             {
                 experiences.map((experience, index) => (
                     <div
-                        class={`flex flex-col sm:flex-row gap-8 items-center ${index % 2 === 1 ? "sm:flex-row-reverse" : ""}`}
+                        class={`experience-card flex flex-col sm:flex-row gap-4 items-center ${index % 2 === 1 ? "sm:flex-row-reverse swoop-in-right" : "swoop-in-left"}`}
                     >
                         <div class="flex-1">
                             <Image
                                 src={experience.image}
                                 alt={experience.alt}
-                                class="w-full aspect-3/2 object-cover rounded-lg"
+                                class="w-full aspect-2/1 object-cover rounded-lg"
                             />
                         </div>
-                        <div class="flex-1 space-y-4">
+                        <div class="flex-1 space-y-2">
                             <h3 class="text-2xl font-bold text-white">
                                 {experience.title}
                             </h3>
@@ -103,13 +167,24 @@ const experiences = [
                                 {experience.description}
                             </p>
                             <div class="flex gap-4">
-                                {experience.buttons.map((button) => (
-                                    <button
-                                        class={`${button.style} px-4 py-2 rounded-md text-sm font-medium transition-colors hover:opacity-90`}
-                                    >
-                                        {button.text}
-                                    </button>
-                                ))}
+                                {experience.buttons.map((button) =>
+                                    button.link ? (
+                                        <a
+                                            href={button.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class={`${button.style} px-4 py-2 rounded-md text-sm font-medium transition-colors hover:opacity-90`}
+                                        >
+                                            {button.text}
+                                        </a>
+                                    ) : (
+                                        <button
+                                            class={`${button.style} px-4 py-2 rounded-md text-sm font-medium transition-colors hover:opacity-90`}
+                                        >
+                                            {button.text}
+                                        </button>
+                                    )
+                                )}
                             </div>
                         </div>
                     </div>
@@ -118,3 +193,21 @@ const experiences = [
         </div>
     </div>
 </section>
+
+<script type="module">
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.experience-card');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
