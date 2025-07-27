@@ -281,7 +281,7 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                       <Image
                         src={voltigeLogo}
                         alt="Parachute Voltige logo"
-                        class="w-48 h-48 bg-white rounded-lg object-contain p-2 shadow-md"
+                        class="w-48 h-48 bg-white rounded-full object-contain p-2 shadow-md"
                       />
                       <div class="flex-1">
                         <h2 class="text-3xl font-semibold text-white mb-2">
@@ -422,28 +422,46 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                 our service providers
               </summary>
               <template x-if="open === 'gear'">
-                <div>
-                  <div class="my-8">
+                 <div class="my-8">
+                  <div id="partner" class="mb-16">
+                    <div class="flex flex-row mb-8">
+                      <!-- For images -->
+                    </div>
                     <h2 class="text-4xl font-semibold text-white mb-6">
-                      Red Canoe
+                      flight gear partner
                     </h2>
-                    <p
-                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
-                    >
-                      Red Canoe was born in a bush plane over the pristine
-                      wilderness of Northern Ontario in 1999. Inspired by
-                      Canadian icons like the legendary deHavilland DHC-2
-                      Beaver, they create premium gear that celebrates the
-                      rugged, hardworking Canadian lifestyle. Their product line
-                      honors the stories of Canadian pioneers who pushed the
-                      limits of possibility in the face of adversity. As proud
-                      partners of the McGill Flying Club, Red Canoe provides our
-                      members with high-quality aviation-inspired gear and
-                      apparel. From durable outerwear to accessories that embody
-                      the spirit of Canadian aviation heritage, their products
-                      are designed for those who appreciate both style and
-                      functionality.
-                    </p>
+                    <div class="flex flex-row gap-8 items-center mb-4">
+                      <Image
+                        src={redCanoeLogo}
+                        alt="ALM Par Avion logo"
+                        class="w-48 h-48 object-contain rounded-lg p-2 shadow-md"
+                      />
+                      <div class="flex-1">
+                        <h2 class="text-3xl font-semibold text-white mb-2">
+                          Red Canoe
+                        </h2>
+                        <p
+                          class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                        >
+                            Red Canoe was born in a bush plane over the pristine
+                        wilderness of Northern Ontario in 1999. Inspired by
+                        Canadian icons like the legendary deHavilland DHC-2
+                        Beaver, they create premium gear that celebrates the
+                        rugged, hardworking Canadian lifestyle. Their product line
+                        honors the stories of Canadian pioneers who pushed the
+                        limits of possibility in the face of adversity. As proud
+                        partners of the McGill Flying Club, Red Canoe provides our
+                        members with high-quality aviation-inspired gear and
+                        apparel. From durable outerwear to accessories that embody
+                        the spirit of Canadian aviation heritage, their products
+                        are designed for those who appreciate both style and
+                        functionality.
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">
+                      discounted flight apparel
+                    </h3>
                     <p
                       class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
                     >
@@ -455,8 +473,8 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                         onclick="revealCode(this)">[Click to reveal]</span
                       > at checkout to access member-only pricing on their entire
                       collection of Canadian heritage-inspired gear.
+                      
                     </p>
-                    <!-- hiding discount code from webscrapers -->
                     <style>
                       .discount-code {
                         cursor: pointer;
@@ -476,6 +494,7 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                         element.onclick = null;
                       }
                     </script>
+                    
                     <div class="flex justify-center my-2">
                       <iframe
                         title="vimeo-player"
@@ -488,6 +507,7 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                         allowfullscreen
                         class="w-full max-w-2xl rounded-lg shadow-md"></iframe>
                     </div>
+                    
                     <a
                       href="https://redcanoebrands.com/"
                       target="_blank"
@@ -495,42 +515,54 @@ import partnerBanner from "../assets/images/partners-banner.jpg";
                       class="text-blue-400 underline">Visit Red Canoe</a
                     >
                   </div>
-                  <div class="my-8">
+                  <div id="partner" class="mb-16">
+                    
+                    </div>
                     <h2 class="text-4xl font-semibold text-white mb-6">
-                      Red Bull
+                      energy drink partner
                     </h2>
-                    <p
-                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
-                    >
-                      Red Bull is our official energy drink partner, providing
+                    <div class="flex flex-row gap-8 items-center mb-4">
+                      <Image
+                        src={redBullLogo}
+                        alt="Red Bull logo"
+                        class="w-48 h-48  object-contain p-2 shadow-md"
+                      />
+                      <div class="flex-1">
+                        <h2 class="text-3xl font-semibold text-white mb-2">
+                          Red Bull
+                        </h2>
+                        <p
+                          class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
+                        >
+                          Red Bull is our official energy drink partner, providing
                       the fuel that keeps our pilots and skydivers performing at
                       their peak during our most intense events and training
-                      sessions.
-                    </p>
-                    <p
-                      class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
-                    >
-                      From early morning flight training sessions to
+                      sessions. From early morning flight training sessions to
                       adrenaline-pumping skydiving events, Red Bull helps our
                       members stay focused, alert, and energized. Their support
                       ensures that whether you're navigating complex flight
                       patterns or experiencing the thrill of freefall, you have
                       the mental and physical stamina to perform at your best.
-                    </p>
+                        </p>
+                      </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-2">
+                      event support
+                    </h3>
                     <p
                       class="text-zinc-200 text-lg leading-relaxed text-justify mb-2"
                     >
-                      <strong>Event Support:</strong> Red Bull provides refreshments
+                      Red Bull provides refreshments
                       for our high-intensity events including our skydiving event, Top Gun Beach Parties, and special aviation workshops.
                       Their products help maintain the energy levels needed for peak
                       performance in demanding aviation activities.
                     </p>
+                    
                     <a
-                      href="https://www.redbull.com/"
+                      href="https://www.redbull.com/ca-en"
                       target="_blank"
                       rel="noopener"
-                      class="text-blue-400 underline">Visit Red Bull</a
-                    >
+                      class="text-blue-400 underline">Visit Red Bull</a>
                   </div>
                 </div>
               </template>

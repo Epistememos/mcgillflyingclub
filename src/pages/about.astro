@@ -52,6 +52,7 @@ import about2 from '../assets/images/about2.jpg';
 import about3 from '../assets/images/about3.jpg';
 import valentineH from '../assets/images/execs/valentineH.jpg';
 import annaL from '../assets/images/execs/annaL.jpg';
+import desireeF from '../assets/images/execs/desireeF.jpg';
 
 ---
 
@@ -252,24 +253,26 @@ import annaL from '../assets/images/execs/annaL.jpg';
             image={brigitC}
             description="Brigit's passion for aviation began watching the Snowbirds flybys of Parliament Hill every year on Canada Day. She then participated in the Royal Canadian Air Cadets program and is now a pilot-in-training for the Royal Canadian Air Force. In her free time, you'll find her at airshows, climbing, and hiking."
             properties={{
-              "Interests": {
-                type: "multi-select",
-                value: [
-                  { value: "Airshows", color: "orange" },
-                  { value: "Hiking", color: "green" },
-                  { value: "Astronauts", color: "purple" }
-                ]
-              },
               "Certifications": {
                 type: "multi-select",
                 value: [
                   { value: "RCAF Student Pilot", color: "blue"  }
                 ]
               },
+              
+              
               "Past Positions": {
                 type: "multi-select",
                 value: [
                   { value: "VP Communications 2023-2024", color: "yellow" },
+                ]
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Airshows", color: "orange" },
+                  { value: "Hiking", color: "green" },
+                  { value: "Astronauts", color: "purple" }
                 ]
               },
             }}
@@ -295,6 +298,36 @@ import annaL from '../assets/images/execs/annaL.jpg';
                   { value: "Reading", color: "purple" },
                   { value: "Travelling", color: "yellow" },
                   { value: "Muay Thai", color: "brown" }
+                ]
+              }
+            }}
+          />
+          <ExecutiveCard 
+            name="Desirée Fisker" 
+            role="Director of Skydiving" 
+            image={desireeF}
+            years="2025-2026" 
+            bio="BASc. Engineering Phys 2023, MASc Aerospace Eng. 2025, PHD Robotics, 2027"
+            description="Desirée hopes to contribute to the space industry and humanity’s efforts to explore the stars. Driven by curiosity and a passion for adventure, she pursues a wide range of outdoor sports alongside solving complex technical challenges. From Whistler, BC, she grew up skiing, mountain biking, and hiking, and later found joy in climbing, cave diving, and skydiving. Over five years in the sport, she has earned her C license, Coach 2 Rating, and worked as a Jump Master, packer, videographer and manifester. She loves skydiving for its unique blend of focus, freedom, and community that inspires growth, confidence, and connection."
+            properties={{
+              "Certifications": {
+                type: "multi-select",
+                value: [
+                  { value: "Class C Skydiving License", color: "blue" },
+                  { value: "Skydiving Coach 2 Rating", color: "purple" }
+                ]
+              },
+              "LinkedIn": {
+                type: "url",
+                value: "https://ca.linkedin.com/in/desiree-fisker-2b6b92170"
+              },
+              "Interests": {
+                type: "multi-select",
+                value: [
+                  { value: "Skydiving", color: "orange" },
+                  { value: "Cave Diving", color: "green" },
+                  { value: "Climbing", color: "red" },
+                  { value: "Robotics", color: "purple" }
                 ]
               }
             }}

@@ -40,7 +40,7 @@ export default function Carousel() {
     };
 
     return <section id="banner">
-        <div className="relative overflow-x-hidden">
+        <div className="relative overflow-x-hidden mb-8">
             <div
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -69,7 +69,7 @@ export default function Carousel() {
                     </svg>
                 </button>
                 <div className="flex-1 text-center w-full py-2 flex flex-col items-center gap-1">
-                    <h2 className="text-4xl font-roboto">{slides[currentSlide].title}</h2>
+                    <h2 className="text-4xl font-bold font-roboto">{slides[currentSlide].title}</h2>
                     <div className="flex gap-2">
                         {slides.map((_, index) => (
                             <button
