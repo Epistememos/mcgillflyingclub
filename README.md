@@ -1,42 +1,5 @@
 # McGill Flying Club Website
 
-## 🚀 Project Structure
-
-```text
-/
-├── public/
-│   ├── images/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── Header.astro
-│   │   ├── Footer.astro
-│   │   └── Navigation.tsx
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       ├── index.astro
-│       ├── flight-training/
-│       │   ├── general-information.astro
-│       │   ├── ground-school.astro
-│       │   └── partner-flight-school.astro
-│       ├── events-activities/
-│       │   ├── pilot-for-a-day.astro
-│       │   ├── skydiving.astro
-│       │   └── flight-simulators.astro
-│       ├── about-us/
-│       │   ├── our-team.astro
-│       │   ├── founders-history.astro
-│       │   └── past-executives.astro
-│       ├── social-media/
-│       │   ├── facebook.astro
-│       │   ├── instagram.astro
-│       │   ├── twitter.astro
-│       │   └── youtube.astro
-│       ├── contact.astro
-│       └── apply.astro
-└── package.json
-```
 
 ## 🧞 Commands
 
@@ -60,18 +23,10 @@ The website is organized into the following main sections:
    - General Information
    - Ground School
    - Partner Flight School
-3. **Events & Activities**
-   - Pilot for a Day
-   - Skydiving
-   - Flight Simulators
-4. **About Us**
+   - -Skydiving School
+3. **About Us**
    - Our Team
-   - Founders & History
    - Past Executives
-5. **Social Media**
-   - Facebook
-   - Instagram
-   - Twitter
-   - YouTube
-6. **Contact Us** - Contact information and form
-7. **Apply** - Membership application page
+4. **Partners**
+5. **Contact Us** - Contact information and form
+
