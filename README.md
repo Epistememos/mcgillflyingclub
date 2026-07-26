@@ -1,5 +1,5 @@
 # McGill Flying Club Website
-
+https://mcgillflyingclub.com/
 
 ## 🧞 Commands
 
